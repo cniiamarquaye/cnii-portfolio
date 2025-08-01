@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Terzaghi Compaction | Nii Amarquaye Commey Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+	<style>
+		/* Custom background blur for visual interest */
+		body::before {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: url('images_/background_blur.jpg') center center / cover no-repeat;
+			filter: blur(8px) brightness(0.7);
+			z-index: -1;
+		}
+	
+		/* Font Family for the whole site */
+		body,
+		html {
+			font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+		}
+	
+		/* Main Headings */
+		h1 {
+			font-size: 2.6em;
+			font-weight: 700;
+			letter-spacing: 0.03em;
+			line-height: 1.1;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Section Headings */
+		h2 {
+			font-size: 2em;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			line-height: 1.2;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Subsection Headings */
+		h3 {
+			font-size: 1.4em;
+			font-weight: 500;
+			letter-spacing: 0.01em;
+			line-height: 1.3;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Minor Headings */
+		h4 {
+			font-size: 1.1em;
+			font-weight: 500;
+			letter-spacing: 0.01em;
+			line-height: 1.4;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Captions under images */
+		.caption {
+			font-size: 1em;
+			font-style: italic;
+			color: #666;
+			text-align: center;
+			margin-top: 0.5em;
+			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+		}
+	
+		/* Normal paragraph text */
+		p,
+		li {
+			font-size: 1em;
+			font-weight: 400;
+			line-height: 1.7;
+			color: #222;
+			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+		}
+	
+		/* Optional: Make links stand out */
+		a {
+			color: #0077cc;
+			text-decoration: none;
+		}
+	
+		a:hover {
+			text-decoration: underline;
+		}
+	
+		#copyright {
+    		display: block !important;
+			color: #bbb;
+			text-align: center;
+			margin: 2em 0 1em 0;
+			font-size: 1em;
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">N. A. Commey</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">Home</a></li>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
+							<span class="label">LinkedIn</span>
+						</a></li>
+					<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
+							<span class="label">GitHub</span>
+						</a></li>
+				</ul>
+		</nav>
+		
+		<!-- Main -->
+		<div id="main">
+			<section class="post">
+				<header class="major">
+					<h1>🏗️ Terzaghi Compaction</h1>
+				</header>
+				<!-- Main Figure/Diagram -->
+				<span class="image main">
+					<img src="images_/comsol002_002.png" alt="Variations in hydraulic head (surface plot) and fluid velocity (streamlines)." />
+					<!-- Place your main figure here. You can add a caption below if needed. -->
+					<p class="caption"> Variations in hydraulic head (surface plot) and fluid velocity (streamlines).</p>
+				</span>
+				<!-- Project Introduction and Details -->
+				<p>
+					Soil might look still on the surface, but it is constantly adjusting to the weight above and the water within. 
+					This project zooms in on a classic geotechnical concept, Terzaghi's 1D consolidation theory. Through simulation using
+					COMSOL Multiphysics, I explored how pore water pressure gradually dissipates when a load is applied, 
+					causing the soil to compact over time. It is a slow, almost meditative squeeze that reflects how structures, 
+					settlements, and groundwater systems are intertwined. Beyond the textbooks and equations, this
+					model gives shape to the invisible adjustments happening beneath our feet every day.
+				</p>
+				
+				<p>
+					<strong>Terzaghi compaction</strong> is a fundamental concept in soil mechanics describing how porous materials,
+					such as aquifers and sediments, compact when fluid is withdrawn from their pore spaces. When groundwater is pumped,
+					fluid pressure drops, causing the soil skeleton to bear more load and compact vertically. This process is crucial
+					for understanding ground subsidence and aquifer behavior.
+				</p>
+				
+				<!-- Key Concept -->
+				<h2>Key Concept</h2>
+				<ul>
+					<li><strong>Skeletal Specific Storage (Ssk):</strong> The volume of water released from storage per unit volume of
+						aquifer per unit decline in hydraulic head. It directly relates to the compressibility of the solid skeleton.
+					</li>
+				</ul>
+				
+				<!-- Governing Equations -->
+				<h2>Governing Equations</h2>
+				<ol>
+					<li>
+						<strong>Fluid Flow (Darcy's Law):</strong>
+						<p>
+							Uses a modified Darcy's Law to describe water flow in a porous medium. The storage coefficient accounts for
+							changes in fluid volume and pore space.
+						</p>
+						<pre style="background: #f8f8f8; padding: 1em; border-radius: 6px;">
+				Sh ∂t/∂H + ∇·(−K∇H) = 0
+				                        </pre>
+						<p>
+							In COMSOL, this is solved in terms of pressure (p) instead of hydraulic head (H).
+						</p>
+					</li>
+					<li>
+						<strong>Vertical Compaction Calculation (Postprocessing):</strong>
+						<p>
+							After fluid flow simulation, vertical compaction (Δb) is calculated:
+						</p>
+						<pre style="background: #f8f8f8; padding: 1em; border-radius: 6px;">
+				Δb = Ssk · b · (−H)
+				                        </pre>
+						<p>
+							Where H is the change in hydraulic head, b is aquifer thickness, and Ssk is skeletal specific storage.
+						</p>
+					</li>
+				</ol>
+				
+				<!-- Problem Setup -->
+				<h2>Problem Setup</h2>
+				<p>
+					The model analyzes fluid behavior in three sedimentary layers overlying an impermeable bedrock with a step. Pumping
+					from a lower aquifer causes hydraulic head to decline, and the model tracks this change and calculates resulting
+					vertical compaction.
+				</p>
+				<span class="image main">
+					<img src="images_/comsol002_001.png" alt="Geometry layout of boundaries and layers." />
+					<p class="caption">
+						Figure 1: Geometry layout of boundaries and layers.
+					</p>
+				</span>
+				
+				<!-- Data Handling and Interpretation -->
+				<h2>🧰 Data Handling and Interpretation</h2>
+				<ul>
+					<li>
+						<strong>Fluid Properties:</strong> 
+						Fluid density (ρf), fluid compressibility (χf).
+					</li>
+					<li>
+						<strong>Porous Medium Properties:</strong> 
+						Skeletal specific storage (Ssk), hydraulic conductivity (Ks),
+						porosity (ϵp).
+					</li>
+					<li>
+						<strong>Boundary Conditions:</strong> 
+						Initial hydraulic head (H(0)), declining head boundary function (H0(t)).
+					</li>
+				</ul>
+				
+				<!-- Results -->
+				<h2>📊 Results</h2>
+				<h3>Hydraulic Head and Velocity Field</h3>
+				<p>
+					Water flows towards the pumping location, with hydraulic gradients and velocities changing abruptly where sediments
+					thicken at the bedrock step. This confirms the fluid flow response to the applied boundary conditions.
+				</p>
+				<span class="image main">
+					<img src="images_/comsol002_002.png" alt="Change in hydraulic head and fluid velocity." />
+					<p class="caption">
+						Figure 2: Change in hydraulic head (surface plot) and fluid velocity (streamlines).
+					</p>
+				</span>
+				<p>
+					This plot shows how hydraulic head (fluid pressure) changes and how water moves through the aquifer due to pumping. 
+					Streamlines indicate flow paths.
+				</p>
+				
+				<h3>Compaction</h3>
+				<span class="image main">
+					<img src="images_/comsol002_003.png" alt="Contour plot of the compaction after 10 years." />
+					<p class="caption">
+						Figure 3: Contour plot of the compaction after 10 years.
+					</p>
+				</span>
+				<p>
+					Areas with larger drops in hydraulic head and higher skeletal specific storage show greater compaction. The contour
+					plot visualizes vertical compaction across sedimentary layers after 10 years.
+				</p>
+				
+				<!-- Insights -->
+				<h2>🧠 Simplified Insights</h2>
+				<ul>
+					<li>
+						<strong>Uncoupled Approach:</strong> 
+						Fluid flow is solved first, then compaction is calculated. This is simpler
+						computationally but doesn't capture feedback between deformation and flow.
+					</li>
+					<li>
+						<strong>Vertical Compaction Focus:</strong> 
+						Terzaghi theory predicts vertical subsidence or compaction of the ground, not horizontal deformation.
+					</li>
+					<li><strong>Practical Use:</strong> 
+						Widely used for preliminary ground subsidence assessments, especially when
+						horizontal deformation is not a concern.
+					</li>
+					<li><strong>Comparison to Biot Poroelasticity:</strong> 
+						Terzaghi does not predict horizontal strain, while Biot poroelasticity does. 
+						Biot's theory is more comprehensive for lateral ground movement.
+					</li>
+				</ul>
+				<p>
+					This model provides a practical framework for understanding and predicting vertical compaction in aquifers and
+					sediments due to groundwater withdrawal.
+				</p>
+				
+				<!-- Key Features -->
+				<h3>Key Features</h3>
+				<ul>
+					<li>Uncoupled fluid flow and compaction calculation</li>
+					<li>Visualizes hydraulic head, velocity, and compaction</li>
+					<li>Supports scenario analysis for subsidence risk</li>
+				</ul>
+				<!-- Technologies Used -->
+				<h3>Technologies Used</h3>
+				<ul>
+					<li>COMSOL Multiphysics</li>
+				</ul>
+				<!-- Back Button -->
+				<a href="index.html" class="button">Back to Portfolio</a>
+				</section>
+				</div>
+				
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<h3>Connect with me</h3>
+				<ul class="icons alt">
+					<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin"><span
+								class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github"><span
+								class="label">GitHub</span></a></li>
+				</ul>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Nii Amarquaye Commey</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

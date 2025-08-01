@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Pesticide Transport and Reaction in Soil | Nii Amarquaye Commey Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+	<style>
+		/* Custom background blur for visual interest */
+		body::before {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: url('images_/background_blur.jpg') center center / cover no-repeat;
+			filter: blur(8px) brightness(0.7);
+			z-index: -1;
+		}
+	
+		/* Font Family for the whole site */
+		body,
+		html {
+			font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+		}
+	
+		/* Main Headings */
+		h1 {
+			font-size: 2.6em;
+			font-weight: 700;
+			letter-spacing: 0.03em;
+			line-height: 1.1;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Section Headings */
+		h2 {
+			font-size: 2em;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			line-height: 1.2;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Subsection Headings */
+		h3 {
+			font-size: 1.4em;
+			font-weight: 500;
+			letter-spacing: 0.01em;
+			line-height: 1.3;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Minor Headings */
+		h4 {
+			font-size: 1.1em;
+			font-weight: 500;
+			letter-spacing: 0.01em;
+			line-height: 1.4;
+			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+		}
+	
+		/* Captions under images */
+		.caption {
+			font-size: 1em;
+			font-style: italic;
+			color: #666;
+			text-align: center;
+			margin-top: 0.5em;
+			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+		}
+	
+		/* Normal paragraph text */
+		p,
+		li {
+			font-size: 1em;
+			font-weight: 400;
+			line-height: 1.7;
+			color: #222;
+			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+		}
+	
+		/* Optional: Make links stand out */
+		a {
+			color: #0077cc;
+			text-decoration: none;
+		}
+	
+		a:hover {
+			text-decoration: underline;
+		}
+		
+
+		#copyright {
+    		display: block !important;
+			color: #bbb;
+			text-align: center;
+			margin: 2em 0 1em 0;
+			font-size: 1em;
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">N. A. Commey</a>
+		</header>
+		
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">Home</a></li>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
+							<span class="label">LinkedIn</span>
+						</a></li>
+					<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
+							<span class="label">GitHub</span>
+						</a></li>
+				</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<section class="post">
+				<header class="major">
+					<h1>🌱 Pesticide Transport and Reaction in Soil</h1>
+				</header>
+				<!-- Main Figure/Diagram -->
+				<span class="image main">
+					<img src="images_/comsol001_007c.gif" alt="Pesticide concentration evolution over time." />
+					<!-- Place your main figure here. You can add a caption below if needed. -->
+					<p class="caption"> Pesticide concentration evolution over time.</p>
+				</span>
+				<!-- Project Introduction and Details -->
+				<p>
+					Pesticides do not just vanish after application. Some break down, others bind to soil, 
+					and many quietly begin a downward journey. This project captures that silent descent of 
+					water-soluble pesticides. After being applied at the surface, they gradually infiltrate 
+					the unsaturated zone and creep toward the water table. Using COMSOL Multiphysics, 
+					I built a coupled model that simulates this exact process. It combines variably saturated 
+					flow (via Richards’ Equation) with solute transport to explore how chemical reactions,
+					soil properties, and infiltration patterns affect contaminant behavior. 
+					The goal? To better understand not just where the pesticide goes, 
+					but how fast, how deep, and how long it lingers.
+				</p>
+				
+				<p>
+					The model is divided into 2 main parts:
+				</p>
+				
+				<!-- Model Structure -->
+				<h2>Model Structure</h2>
+				<h3>1. Perfectly Mixed System (Water Pond Model)</h3>
+				<ul>
+					<li><strong>Setup:</strong> A closed, perfectly mixed water pond contains Aldicarb and its degradation products.
+						“Perfectly mixed” means uniform concentration throughout—no spatial gradients to worry about here.</li>
+					<li><strong>Chemistry:</strong> Six unimolecular reactions transform Aldicarb into sulfoxide and sulfone (both
+						toxic, LD₅₀ = 0.9 mg/kg and 24 mg/kg respectively), and then further into less toxic oximes and nitriles (LD₅₀
+						up to 8,000 mg/kg).</li>
+					<li><strong>Math:</strong> A set of coupled Ordinary Differential Equations (ODEs) tracks each species’ mass balance
+						over time. Solving the degradation kinetics and residence periods shows how Aldicarb transforms into other toxic
+						forms and eventually detoxifies. Toxicity is indicated by LD₅₀ values.</li>
+				</ul>
+				<h3>2. Space and Time-Dependent System (Soil Transport Model)</h3>
+				<ul>
+					<li><strong>Key Processes:</strong> In the soil, chemicals react and move by convection (flowing water), dispersion
+						(variations in flow paths and diffusion), sorption (sticking to soil), and volatilization (evaporation).</li>
+					<li><strong>Geometry:</strong> Two layered soil domains beneath a ponded ring (radius = 0.25 m) on nearly impervious
+						rock. Water infiltrates through the ring and seeps down through the soil layers. Infinite‐element domains on the
+						sides let water and solutes “escape to infinity” without artificial boundary effects.</li>
+					<li><strong>Mass Transport:</strong> Movement of solutes is described by a governing equation accounting for
+						advection, dispersion, sorption, volatilization, and decay. Diffusion is represented by a liquid-gas dispersion
+						tensor.</li>
+				</ul>
+				
+				<!-- Data Handling -->
+				<h2>🧰 Data Handling</h2>
+				<ul>
+					<li><strong>Rate Constants:</strong> Define how fast each chemical reaction proceeds (k1, k2, k3, k4, k5).</li>
+					<li><strong>Geometric and Material Properties:</strong> Fluid flow (Ks, θs, θr, α, n), solute transport (ρb, kp, Dm,
+						αr, αz, ϕL, ϕP, c0).</li>
+					<li><strong>Boundary Conditions:</strong> Constant concentration at the pond interface, no-flow boundaries, and
+						volatilization to the atmosphere.</li>
+				</ul>
+				<p>
+					The model simulates vertical infiltration through two soil layers beneath a surface ring. The geometric setup
+					(Figure 1) includes an axisymmetric domain that captures vertical flow dynamics without modeling an entire 3D scene.
+					The pond sits on top of the upper soil layer and infiltrates downward, replicating realistic field conditions.
+				</p>
+				<!-- Figure 1: Geometry -->
+				<span class="image main">
+					<img src="images_/comsol001_001.png" alt="Geometry of the infiltration ring and soil column." />
+					<p class="caption">Figure 1: Geometry of the infiltration ring and soil column.</p>
+				</span>
+				
+				<!-- Results & Visualizations -->
+				<h2>📊 Key Results & Visualizations</h2>
+				<h3>Perfectly Mixed System</h3>
+				<p>
+					Aldicarb quickly degrades, but its toxic by-products (sulfoxide and sulfone) can persist for much longer, leading to
+					high contamination levels even after several months. This highlights the importance of considering degradation
+					pathways and the toxicity of intermediate products.
+				</p>
+				<span class="image main">
+					<img src="images_/comsol001_002.png"
+						alt="2D Concentration profiles as reactions occur during a 100 day time period." />
+					<p class="caption">Figure 2: 2D Concentration profiles as reactions occur during a 100 day time period.</p>
+				</span>
+				<p>
+					This plot shows the overall degradation of aldicarb and the formation and subsequent decay of its by-products over
+					100 days.
+				</p>
+				
+				<h3>Fluid Flow in Soil</h3>
+				<p>
+					Water moves from the pond into the soil, with higher velocities directly beneath the pond. This flow field is
+					crucial because it dictates the direction of contaminant transport.
+				</p>
+				<span class="image main">
+					<img src="images_/comsol001_003.gif"
+						alt="Animated 2D view of effective saturation, pressure head, and flow velocity in variably saturated soil." />
+					<p class="caption">Figure 3: Animated 2D view of effective saturation (surface plot), pressure head (contours), and
+						flow velocity (arrows) in a variably saturated soil, over 10 days.</p>
+				</span>
+				<p>
+					Head contours and streamlines show water infiltrating primarily beneath the ring and spreading out over time. The
+					flow field in the variably saturated soil is the “engine” of contaminant transport and governed by Richards
+					equation. The hydraulic head and Darcy velocity field determine exactly how—and where—the pesticide will go.
+				</p>
+								
+				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: center; margin-bottom: 2em;">
+					<div style="flex: 1; min-width: 200px; display: flex; flex-direction: column;">
+						<img src="images_/comsol001_004a.png" 
+						alt="2D pressure head distribution in the soil column after 10 days of infiltration." 
+						style="width: 100%; border-radius: 8px;" />
+						<p class="caption">
+							Figure 4a: 2D pressure head distribution (in decibars) in the soil column after 10 days of infiltration. 
+							The steep vertical gradient beneath the ponded ring indicates strong downward flow, while the 
+							horizontal contours near the bottom suggest lateral spreading and transition to a near-hydrostatic condition.
+						</p>
+					</div>
+					<div style="flex: 1; min-width: 200px; display: flex; flex-direction: column;">
+						<img src="images_/comsol001_004b.png" 
+						alt="3D visualization of pressure head in the soil domain."
+						style="width: 100%; border-radius: 8px;" />
+						<p class="caption">
+							Figure 4b: 3D visualization of pressure head in the soil domain. 
+							The pressure field is highest near the infiltration source,
+							driving fluid downward through the upper soil and into the lower layer. 
+							This gradient controls the direction and velocity of contaminant transport.
+						</p>
+					</div>
+				</div>
+				
+				<p>
+					These plots reveal the head gradient driving infiltration. Areas of high hydraulic head correspond to zones of
+					increased water entry, directly linked to solute transport patterns.
+				</p>
+				
+				<h3>Concentration Distribution of Aldicarb and its By-products</h3>
+				<h4>Aldicarb Distribution—After 10 Days</h4>
+				<span class="image main">
+					<img src="images_/comsol001_005a.png" alt="2D view showing aldicarb concentration evolution after 10 days." />
+					<p class="caption">Figure 5a: 2D display of aldicarb concentration evolution after 10 days.</p>
+				</span>
+				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
+					<div style="flex: 1; min-width: 200px;">
+						<img src="images_/comsol001_005b.png" alt="3D view showing aldicarb concentration evolution after 10 days."
+							style="width: 100%; border-radius: 8px;" />
+						<p class="caption">Figure 5b: 3D display of aldicarb concentration evolution after 10 days.</p>
+					</div>
+					<div style="flex: 1; min-width: 200px;">
+						<img src="images_/comsol001_005c.gif" alt="Animated 3D view showing aldicarb concentration evolution over 10 days."
+							style="width: 100%; border-radius: 8px;" />
+						<p class="caption">Figure 5c: Animated 3D display of aldicarb concentration evolution over 10 days.</p>
+					</div>
+				</div>
+				<p>
+					Aldicarb tends to remain more localised to the source, and its distribution reaches a steady state relatively
+					quickly (around 10 days), consistent with the degradation observed in the mixed system model.
+				</p>
+				
+				<h4>Aldicarb Sulfoxide Distribution—After 10 Days</h4>
+				<span class="image main">
+					<img src="images_/comsol001_006a.png" alt="2D view showing aldicarb sulfoxide concentration evolution after 10 days." />
+					<p class="caption">Figure 6a: 2D display of aldicarb sulfoxide concentration evolution after 10 days.</p>
+				</span>
+				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
+					<div style="flex: 1; min-width: 200px;">
+						<img src="images_/comsol001_006b.png"
+							alt="3D view showing aldicarb sulfoxide concentration evolution after 10 days."
+							style="width: 100%; border-radius: 8px;" />
+						<p class="caption">Figure 6b: 3D display of aldicarb sulfoxide concentration evolution after 10 days.</p>
+					</div>
+					<div style="flex: 1; min-width: 200px;">
+						<img src="images_/comsol001_006c.gif"
+							alt="Animated 3D view showing aldicarb sulfoxide concentration evolution over 10 days."
+							style="width: 100%; border-radius: 8px;" />
+						<p class="caption">Figure 6c: Animated 3D display of aldicarb sulfoxide concentration evolution over 10 days.
+						</p>
+					</div>
+				</div>
+				<p>
+					Aldicarb sulfoxide, being an equally toxic degradation product that is also mobile, can spread over a considerably
+					larger soil volume and persist for a significantly longer time. This is a critical finding, as it implies a wider
+					and more prolonged environmental impact from the degradation product than from the parent pesticide itself.
+				</p>
+				
+				<h4>Aldicarb Sulfone Distribution—After 10 Days</h4>
+				<span class="image main">
+					<img src="images_/comsol001_007a.png" alt="2D view showing aldicarb sulfone concentration evolution after 10 days." />
+					<p class="caption">Figure 7a: 2D display of aldicarb sulfone concentration evolution after 10 days.</p>
+				</span>
+				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
+					<div style="flex: 1; min-width: 200px;">
+						<img src="images_/comsol001_007b.png" alt="3D view showing aldicarb sulfone concentration evolution after 10 days."
+							style="width: 100%; border-radius: 8px;" />
+						<p class="caption">Figure 7b: 3D display of aldicarb sulfone concentration evolution after 10 days.</p>
+					</div>
+					<div style="flex: 1; min-width: 200px;">
+						<img src="images_/comsol001_007c.gif"
+							alt="Animated 3D view showing aldicarb sulfone concentration evolution over 10 days."
+							style="width: 100%; border-radius: 8px;" />
+						<p class="caption">Figure 7c: Animated 3D display of aldicarb sulfone concentration evolution over 10 days.
+						</p>
+					</div>
+				</div>
+				<p>
+					Aldicarb sulfone, which is also toxic but slightly less mobile than sulfoxide, does not spread as aggressively, but
+					its persistence is notable and must be considered in long-term risk assessments.
+				</p>
+				<p>
+					These surface plots show the spatial distribution of aldicarb, aldicarb sulfoxide and aldicarb sulfone in the soil
+					over 10 days.
+				</p>
+				
+				<!-- Insights -->
+				<h3>🧠 Simplified Insights</h3>
+				<ul>
+					<li>
+						<strong>Complex Interactions:</strong> 
+						Groundwater contamination involves a complex interplay of physical flow processes 
+						(flow, dispersion, sorption, volatilization) and chemical reactions (degradation).
+					</li>
+					<li>
+						<strong>Degradation Products Matter:</strong> 
+						The toxicity and mobility of degradation products are as important as the parent contaminant. 
+						These products can drive long-term risk.
+					</li>
+					<li>
+						<strong>Infinite Element Domain:</strong> 
+						Using "Infinite Element Domain" in COMSOL simulates very large domains
+						without artificial boundary effects. This allows for more accurate results in the region of interest.
+					</li>
+				</ul>
+				<p>
+					This model provides a robust framework for understanding and predicting the environmental fate of pesticides in the
+					subsurface, guiding risk assessment and management strategies.
+				</p>
+				
+				<!-- Key Features -->
+				<h3>Key Features</h3>
+				<ul>
+					<li>Multi-physics simulation (Richards’, Darcy, chemical reactions)</li>
+					<li>Visualizes contaminant transport and risk zones</li>
+					<li>Supports scenario analysis for groundwater management</li>
+				</ul>
+				<!-- Technologies Used -->
+				<h3>Technologies Used</h3>
+				<ul>
+					<li>COMSOL Multiphysics</li>
+					<li>Custom ODE solvers</li>
+					<li>GIS for spatial data integration</li>
+				</ul>
+				<!-- Back Button -->
+				<a href="index.html" class="button">Back to Portfolio</a>
+				</section>
+				</div>
+				
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<h3>Connect with me</h3>
+				<ul class="icons alt">
+					<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin"><span
+								class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github"><span
+								class="label">GitHub</span></a></li>
+				</ul>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Nii Amarquaye Commey</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

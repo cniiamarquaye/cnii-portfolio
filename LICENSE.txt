@@ -1,0 +1,29 @@
+MIT License
+
+Copyright (c) 2025 Nii Amarquaye Commey
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this portfolio and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This portfolio site uses the "Massively" template by HTML5 UP (https://html5up.net), which is free for personal and commercial use under the Creative Commons Attribution 3.0 Unported (CC BY 3.0) license. Please retain their attribution in the footer as required.
+
+All original project content, images, and code (except template files and demo images) are the intellectual property of Nii Amarquaye Commey unless otherwise credited. You are welcome to use, adapt, and share this work, but please provide appropriate credit and retain all relevant attributions.
+
+For questions, collaboration, or permissions beyond the scope of this license, please contact me

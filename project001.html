@@ -9,126 +9,47 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-	<style>
-		/* Custom background blur for visual interest */
-		body::before {
-			content: "";
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			background: url('images_/background_blur.jpg') center center / cover no-repeat;
-			filter: blur(8px) brightness(0.7);
-			z-index: -1;
-		}
-	
-		/* Font Family for the whole site */
-		body,
-		html {
-			font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-		}
-	
-		/* Main Headings */
-		h1 {
-			font-size: 2.6em;
-			font-weight: 700;
-			letter-spacing: 0.03em;
-			line-height: 1.1;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Section Headings */
-		h2 {
-			font-size: 2em;
-			font-weight: 600;
-			letter-spacing: 0.02em;
-			line-height: 1.2;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Subsection Headings */
-		h3 {
-			font-size: 1.4em;
-			font-weight: 500;
-			letter-spacing: 0.01em;
-			line-height: 1.3;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Minor Headings */
-		h4 {
-			font-size: 1.1em;
-			font-weight: 500;
-			letter-spacing: 0.01em;
-			line-height: 1.4;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Captions under images */
-		.caption {
-			font-size: 1em;
-			font-style: italic;
-			color: #666;
-			text-align: center;
-			margin-top: 0.5em;
-			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-		}
-	
-		/* Normal paragraph text */
-		p,
-		li {
-			font-size: 1em;
-			font-weight: 400;
-			line-height: 1.7;
-			color: #222;
-			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-		}
-	
-		/* Optional: Make links stand out */
-		a {
-			color: #0077cc;
-			text-decoration: none;
-		}
-	
-		a:hover {
-			text-decoration: underline;
-		}
-		
 
-		#copyright {
-    		display: block !important;
-			color: #bbb;
-			text-align: center;
-			margin: 2em 0 1em 0;
-			font-size: 1em;
-		}
-	</style>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9WX8V2Q18"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-R9WX8V2Q18');
+	</script>
 </head>
 
 <body class="is-preload">
-
-	<!-- Wrapper -->
 	<div id="wrapper" class="fade-in">
+		<a href="#wrapper" class="back-to-top button icon solid solo fa-arrow-up scrolly">Top</a>
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo">N. A. Commey</a>
+			<a href="index.html" class="logo">Nii Amarquaye Commey</a>
 		</header>
-		
+
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li class="active"><a href="index.html">Home</a></li>
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
-							<span class="label">LinkedIn</span>
-						</a></li>
-					<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
-							<span class="label">GitHub</span>
-						</a></li>
-				</ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="profile.html">About Nii</a></li>
+				<li class="active"><a href="index.html#projects">Projects</a></li>
+				<li><a href="#footer">Contact</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
+						<span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
+						<span class="label">GitHub</span></a></li>
+				<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+						<span class="label">Google Scholar</span></a></li>
+			</ul>
+			<button class="hamburger-menu" id="hamburger-menu" aria-label="Open navigation menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</nav>
 
 		<!-- Main -->
@@ -139,8 +60,12 @@
 				</header>
 				<!-- Main Figure/Diagram -->
 				<span class="image main">
-					<img src="images_/comsol001_007c.gif" alt="Pesticide concentration evolution over time." />
-					<!-- Place your main figure here. You can add a caption below if needed. -->
+					<video autoplay loop muted playsinline
+						alt="Animated pesticide concentration evolution over time." loading="lazy">
+						<source src="assets/vids_/comsol/comsol001_007c.webm" type="video/webm">
+						<source src="assets/vids_/comsol/comsol001_007c.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 					<p class="caption"> Pesticide concentration evolution over time.</p>
 				</span>
 				<!-- Project Introduction and Details -->
@@ -155,13 +80,13 @@
 					The goal? To better understand not just where the pesticide goes, 
 					but how fast, how deep, and how long it lingers.
 				</p>
-				
 				<p>
 					The model is divided into 2 main parts:
 				</p>
+				<hr />
 				
 				<!-- Model Structure -->
-				<h2>Model Structure</h2>
+				<h2>🧩 Model Structure</h2>
 				<h3>1. Perfectly Mixed System (Water Pond Model)</h3>
 				<ul>
 					<li><strong>Setup:</strong> A closed, perfectly mixed water pond contains Aldicarb and its degradation products.
@@ -186,27 +111,31 @@
 				</ul>
 				
 				<!-- Data Handling -->
-				<h2>🧰 Data Handling</h2>
-				<ul>
-					<li><strong>Rate Constants:</strong> Define how fast each chemical reaction proceeds (k1, k2, k3, k4, k5).</li>
-					<li><strong>Geometric and Material Properties:</strong> Fluid flow (Ks, θs, θr, α, n), solute transport (ρb, kp, Dm,
-						αr, αz, ϕL, ϕP, c0).</li>
-					<li><strong>Boundary Conditions:</strong> Constant concentration at the pond interface, no-flow boundaries, and
-						volatilization to the atmosphere.</li>
-				</ul>
-				<p>
-					The model simulates vertical infiltration through two soil layers beneath a surface ring. The geometric setup
-					(Figure 1) includes an axisymmetric domain that captures vertical flow dynamics without modeling an entire 3D scene.
-					The pond sits on top of the upper soil layer and infiltrates downward, replicating realistic field conditions.
-				</p>
-				<!-- Figure 1: Geometry -->
-				<span class="image main">
-					<img src="images_/comsol001_001.png" alt="Geometry of the infiltration ring and soil column." />
-					<p class="caption">Figure 1: Geometry of the infiltration ring and soil column.</p>
-				</span>
-				
+				<div class="features-row">
+					<div class="features-col">
+						<h2>🧰 Data Handling</h2>
+						<ul>
+							<li><strong>Rate Constants:</strong> Define how fast each chemical reaction proceeds (k1-k5).</li>
+							<li><strong>Material Properties:</strong> Includes fluid flow parameters (Ks, θs, θr) and solute transport
+								properties (ρb, kp, Dm).</li>
+							<li><strong>Boundary Conditions:</strong> Constant concentration at the pond, no-flow boundaries, and
+								volatilization to the atmosphere.</li>
+						</ul>
+						<p>The model simulates vertical infiltration through two soil layers beneath a surface ring, replicating
+							realistic field conditions in an efficient axisymmetric domain.</p>
+					</div>
+					<div class="features-col">
+						<div class="image main" style="margin-top: 0;">
+							<img src="assets/images_/comsol/comsol001_001.png" alt="Geometry of the infiltration ring and soil column."
+								loading="lazy" />
+							<p class="caption">Figure 1: Geometry of the infiltration ring and soil column.</p>
+						</div>
+					</div>
+				</div>
+				<hr />
+			
 				<!-- Results & Visualizations -->
-				<h2>📊 Key Results & Visualizations</h2>
+				<h2>📊 Results & Visualisations</h2>
 				<h3>Perfectly Mixed System</h3>
 				<p>
 					Aldicarb quickly degrades, but its toxic by-products (sulfoxide and sulfone) can persist for much longer, leading to
@@ -214,8 +143,8 @@
 					pathways and the toxicity of intermediate products.
 				</p>
 				<span class="image main">
-					<img src="images_/comsol001_002.png"
-						alt="2D Concentration profiles as reactions occur during a 100 day time period." />
+					<img src="assets/images_/comsol/comsol001_002.png"
+						alt="2D Concentration profiles as reactions occur during a 100 day time period." loading="lazy"/>
 					<p class="caption">Figure 2: 2D Concentration profiles as reactions occur during a 100 day time period.</p>
 				</span>
 				<p>
@@ -229,8 +158,12 @@
 					crucial because it dictates the direction of contaminant transport.
 				</p>
 				<span class="image main">
-					<img src="images_/comsol001_003.gif"
-						alt="Animated 2D view of effective saturation, pressure head, and flow velocity in variably saturated soil." />
+					<video autoplay loop muted playsinline 
+						alt="Animated 2D view of effective saturation, pressure head, and flow velocity in variably saturated soil." loading="lazy">
+						<source src="assets/vids_/comsol/comsol001_003.webm" type="video/webm">
+						<source src="assets/vids_/comsol/comsol001_003.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 					<p class="caption">Figure 3: Animated 2D view of effective saturation (surface plot), pressure head (contours), and
 						flow velocity (arrows) in a variably saturated soil, over 10 days.</p>
 				</span>
@@ -242,9 +175,8 @@
 								
 				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: center; margin-bottom: 2em;">
 					<div style="flex: 1; min-width: 200px; display: flex; flex-direction: column;">
-						<img src="images_/comsol001_004a.png" 
-						alt="2D pressure head distribution in the soil column after 10 days of infiltration." 
-						style="width: 100%; border-radius: 8px;" />
+						<img src="assets/images_/comsol/comsol001_004a.png" 
+						alt="2D pressure head distribution in the soil column after 10 days of infiltration." loading="lazy" />
 						<p class="caption">
 							Figure 4a: 2D pressure head distribution (in decibars) in the soil column after 10 days of infiltration. 
 							The steep vertical gradient beneath the ponded ring indicates strong downward flow, while the 
@@ -252,9 +184,8 @@
 						</p>
 					</div>
 					<div style="flex: 1; min-width: 200px; display: flex; flex-direction: column;">
-						<img src="images_/comsol001_004b.png" 
-						alt="3D visualization of pressure head in the soil domain."
-						style="width: 100%; border-radius: 8px;" />
+						<img src="assets/images_/comsol/comsol001_004b.png" 
+						alt="3D visualization of pressure head in the soil domain." loading="lazy" />
 						<p class="caption">
 							Figure 4b: 3D visualization of pressure head in the soil domain. 
 							The pressure field is highest near the infiltration source,
@@ -272,18 +203,22 @@
 				<h3>Concentration Distribution of Aldicarb and its By-products</h3>
 				<h4>Aldicarb Distribution—After 10 Days</h4>
 				<span class="image main">
-					<img src="images_/comsol001_005a.png" alt="2D view showing aldicarb concentration evolution after 10 days." />
+					<img src="assets/images_/comsol001_005a.png" alt="2D view showing aldicarb concentration evolution after 10 days." />
 					<p class="caption">Figure 5a: 2D display of aldicarb concentration evolution after 10 days.</p>
 				</span>
 				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
-					<div style="flex: 1; min-width: 200px;">
-						<img src="images_/comsol001_005b.png" alt="3D view showing aldicarb concentration evolution after 10 days."
-							style="width: 100%; border-radius: 8px;" />
+					<div style="flex: 1; min-width: 200px; display: flex; flex-direction: column;">
+						<img src="assets/images_/comsol/comsol001_005b.png" 
+						alt="3D view showing aldicarb concentration evolution after 10 days." loading="lazy"/>
 						<p class="caption">Figure 5b: 3D display of aldicarb concentration evolution after 10 days.</p>
 					</div>
-					<div style="flex: 1; min-width: 200px;">
-						<img src="images_/comsol001_005c.gif" alt="Animated 3D view showing aldicarb concentration evolution over 10 days."
-							style="width: 100%; border-radius: 8px;" />
+					<div style="flex: 1; min-width: 200px;display: flex; flex-direction: column;">
+						<video autoplay loop muted playsinline 
+							alt="Animated 3D view showing aldicarb concentration evolution over 10 days." loading="lazy">
+							<source src="assets/vids_/comsol/comsol001_005c.webm" type="video/webm">
+							<source src="assets/vids_/comsol/comsol001_005c.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 						<p class="caption">Figure 5c: Animated 3D display of aldicarb concentration evolution over 10 days.</p>
 					</div>
 				</div>
@@ -294,20 +229,23 @@
 				
 				<h4>Aldicarb Sulfoxide Distribution—After 10 Days</h4>
 				<span class="image main">
-					<img src="images_/comsol001_006a.png" alt="2D view showing aldicarb sulfoxide concentration evolution after 10 days." />
+					<img src="assets/images_/comsol/comsol001_006a.png" 
+					alt="2D view showing aldicarb sulfoxide concentration evolution after 10 days." loading="lazy"/>
 					<p class="caption">Figure 6a: 2D display of aldicarb sulfoxide concentration evolution after 10 days.</p>
 				</span>
 				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
-					<div style="flex: 1; min-width: 200px;">
-						<img src="images_/comsol001_006b.png"
-							alt="3D view showing aldicarb sulfoxide concentration evolution after 10 days."
-							style="width: 100%; border-radius: 8px;" />
+					<div style="flex: 1; min-width: 200px;display: flex; flex-direction: column;">
+						<img src="assets/images_/comsol/comsol001_006b.png"
+							alt="3D view showing aldicarb sulfoxide concentration evolution after 10 days." loading="lazy"/>
 						<p class="caption">Figure 6b: 3D display of aldicarb sulfoxide concentration evolution after 10 days.</p>
 					</div>
-					<div style="flex: 1; min-width: 200px;">
-						<img src="images_/comsol001_006c.gif"
-							alt="Animated 3D view showing aldicarb sulfoxide concentration evolution over 10 days."
-							style="width: 100%; border-radius: 8px;" />
+					<div style="flex: 1; min-width: 200px;display: flex; flex-direction: column;">
+						<video autoplay loop muted playsinline
+							alt="Animated 3D view showing aldicarb sulfoxide concentration evolution over 10 days." loading="lazy">
+							<source src="assets/vids_/comsol/comsol001_006c.webm" type="video/webm">
+							<source src="assets/vids_/comsol/comsol001_006c.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 						<p class="caption">Figure 6c: Animated 3D display of aldicarb sulfoxide concentration evolution over 10 days.
 						</p>
 					</div>
@@ -320,19 +258,23 @@
 				
 				<h4>Aldicarb Sulfone Distribution—After 10 Days</h4>
 				<span class="image main">
-					<img src="images_/comsol001_007a.png" alt="2D view showing aldicarb sulfone concentration evolution after 10 days." />
+					<img src="assets/images_/comsol/comsol001_007a.png" 
+					alt="2D view showing aldicarb sulfone concentration evolution after 10 days." loading="lazy"/>
 					<p class="caption">Figure 7a: 2D display of aldicarb sulfone concentration evolution after 10 days.</p>
 				</span>
 				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
-					<div style="flex: 1; min-width: 200px;">
-						<img src="images_/comsol001_007b.png" alt="3D view showing aldicarb sulfone concentration evolution after 10 days."
-							style="width: 100%; border-radius: 8px;" />
+					<div style="flex: 1; min-width: 200px;display: flex; flex-direction: column;">
+						<img src="assets/images_/comsol/comsol001_007b.png" 
+						alt="3D view showing aldicarb sulfone concentration evolution after 10 days." loading="lazy" />
 						<p class="caption">Figure 7b: 3D display of aldicarb sulfone concentration evolution after 10 days.</p>
 					</div>
-					<div style="flex: 1; min-width: 200px;">
-						<img src="images_/comsol001_007c.gif"
-							alt="Animated 3D view showing aldicarb sulfone concentration evolution over 10 days."
-							style="width: 100%; border-radius: 8px;" />
+					<div style="flex: 1; min-width: 200px;display: flex; flex-direction: column;">
+						<video autoplay loop muted playsinline 
+							alt="Animated 3D view showing aldicarb sulfone concentration evolution over 10 days." loading="lazy">
+							<source src="assets/vids_/comsol/comsol001_007c.webm" type="video/webm">
+							<source src="assets/vids_/comsol/comsol001_007c.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 						<p class="caption">Figure 7c: Animated 3D display of aldicarb sulfone concentration evolution over 10 days.
 						</p>
 					</div>
@@ -345,6 +287,7 @@
 					These surface plots show the spatial distribution of aldicarb, aldicarb sulfoxide and aldicarb sulfone in the soil
 					over 10 days.
 				</p>
+				<hr />
 				
 				<!-- Insights -->
 				<h3>🧠 Simplified Insights</h3>
@@ -369,39 +312,69 @@
 					This model provides a robust framework for understanding and predicting the environmental fate of pesticides in the
 					subsurface, guiding risk assessment and management strategies.
 				</p>
-				
-				<!-- Key Features -->
-				<h3>Key Features</h3>
-				<ul>
-					<li>Multi-physics simulation (Richards’, Darcy, chemical reactions)</li>
-					<li>Visualizes contaminant transport and risk zones</li>
-					<li>Supports scenario analysis for groundwater management</li>
-				</ul>
-				<!-- Technologies Used -->
-				<h3>Technologies Used</h3>
-				<ul>
-					<li>COMSOL Multiphysics</li>
-					<li>Custom ODE solvers</li>
-					<li>GIS for spatial data integration</li>
-				</ul>
+				<hr />
+
+				<!-- Key Features & Technologies -->
+				<h3>Key Features & Technologies</h3>
+				<div class="features-row">
+					<div class="features-col">
+						<h4>Key Features</h4>
+						<ul>
+							<li>Multi-physics simulation (Richards’, Darcy, Stokes)</li>
+							<li>Visualizes contaminant transport and risk zones</li>
+							<li>Supports scenario analysis for groundwater management</li>
+						</ul>
+					</div>
+					<div class="features-col">
+						<h4>Technologies Used</h4>
+						<ul>
+							<li>COMSOL Multiphysics</li>
+							<li>Custom ODE solvers</li>
+						</ul>
+					</div>
+				</div>
 				<!-- Back Button -->
 				<a href="index.html" class="button">Back to Portfolio</a>
-				</section>
-				</div>
-				
+			</section>
+		</div>
 		<!-- Footer -->
 		<footer id="footer">
 			<section>
-				<h3>Connect with me</h3>
-				<ul class="icons alt">
-					<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin"><span
-								class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github"><span
-								class="label">GitHub</span></a></li>
-				</ul>
+				<h2>Reach Out</h2>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="alt">
+				<section>
+					<h3>Connect with me</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
+								<span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
+								<span class="label">GitHub</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+								<span class="label">Google Scholar</span></a></li>
+					</ul>
+				</section>
 			</section>
 		</footer>
-
 		<!-- Copyright -->
 		<div id="copyright">
 			<ul>

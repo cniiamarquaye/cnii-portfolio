@@ -9,340 +9,255 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-	<style>
-		/* Custom background blur for visual interest */
-		body::before {
-			content: "";
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			background: url('images_/background_blur.jpg') center center / cover no-repeat;
-			filter: blur(8px) brightness(0.7);
-			z-index: -1;
-		}
-	
-		/* Font Family for the whole site */
-		body,
-		html {
-			font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-		}
-	
-		/* Main Headings */
-		h1 {
-			font-size: 2.6em;
-			font-weight: 700;
-			letter-spacing: 0.03em;
-			line-height: 1.1;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Section Headings */
-		h2 {
-			font-size: 2em;
-			font-weight: 600;
-			letter-spacing: 0.02em;
-			line-height: 1.2;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Subsection Headings */
-		h3 {
-			font-size: 1.4em;
-			font-weight: 500;
-			letter-spacing: 0.01em;
-			line-height: 1.3;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Minor Headings */
-		h4 {
-			font-size: 1.1em;
-			font-weight: 500;
-			letter-spacing: 0.01em;
-			line-height: 1.4;
-			font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-		}
-	
-		/* Captions under images */
-		.caption {
-			font-size: 1em;
-			font-style: italic;
-			color: #666;
-			text-align: center;
-			margin-top: 0.5em;
-			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-		}
-	
-		/* Normal paragraph text */
-		p,
-		li {
-			font-size: 1em;
-			font-weight: 400;
-			line-height: 1.7;
-			color: #222;
-			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-		}
-	
-		/* Optional: Make links stand out */
-		a {
-			color: #0077cc;
-			text-decoration: none;
-		}
-	
-		a:hover {
-			text-decoration: underline;
-		}
-
-		#copyright {
-   			display: block !important;
-			color: #bbb;
-			text-align: center;
-			margin: 2em 0 1em 0;
-			font-size: 1em;
-		}
-	</style>
+	<!-- Google Analytics-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9WX8V2Q18"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-R9WX8V2Q18');
+	</script>
 </head>
 
 <body class="is-preload">
-
-	<!-- Wrapper -->
 	<div id="wrapper" class="fade-in">
+		<a href="#wrapper" class="back-to-top button icon solid solo fa-arrow-up scrolly">Top</a>
 
+		<div id="intro" class="hidden"></div>
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo">N. A. Commey</a>
+			<a href="index.html" class="logo">Nii Amarquaye Commey</a>
 		</header>
-
+		
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="profile.html">About Nii</a></li>
+				<li class="active"><a href="index.html#projects">Projects</a></li>
+				<li><a href="#footer">Contact</a></li>
+			</ul>
 			<ul class="icons">
 				<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
-						<span class="label">LinkedIn</span>
-					</a></li>
+						<span class="label">LinkedIn</span></a></li>
 				<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
-						<span class="label">GitHub</span>
-					</a></li>
+						<span class="label">GitHub</span></a></li>
+				<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+						<span class="label">Google Scholar</span></a></li>
 			</ul>
+			<button class="hamburger-menu" id="hamburger-menu" aria-label="Open navigation menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</nav>
-		
-		<!-- Main -->
+
 		<div id="main">
 			<section class="post">
 				<header class="major">
-					<h1>🧪 Modelling Groundwater Contamination</h1>
+					<h1>💧 Modelling Groundwater Contamination</h1>
 				</header>
-				<!-- Main Figure/Diagram -->
-				<span class="image main">
-					<img src="images_/comsol000_etc2.gif" alt="Groundwater Contamination Model" />
-					<!-- Place your main figure here. You can add a caption below if needed. -->
-					<p class="caption"> Simulation of contaminant transport in groundwater using COMSOL.</p>
-				</span>
-				<!-- Project Introduction -->
-				<p>
-					Groundwater does not advertise its troubles. When a chemical spill hits the surface, the danger does not always end with a
-					quick cleanup. Beneath our feet, water slowly carries that contaminant through unsaturated zones, aquifers, and in some cases,
-					straight into our pumping wells. This project brings that quiet process to light using COMSOL Multiphysics.
-					This simple conceptual model uses coupled physics; i.e. fluid flow through soil (Richards’ Equation), 
-					saturated zone transport (Darcy’s Law), and velocity-driven flow near the well (Stokes flow), 
-					to reveal how a small surface event can spiral into a major water quality problem.
-				</p>
-				<!-- Project Details -->
-				<p>
-					I explored how a contaminant released at the surface migrates through the subsurface and eventually reaches a
-					groundwater well. This system is broken down into three interconnected domains, as shown in Figure 1a and b.
-				</p>
-				
-				<div class="row" style="display: flex; gap: 2em; justify-content: center; align-items: center; margin-bottom: 2em;">
-					<div style="flex: 1; min-width: 200px; display: flex; flex-direction: column;">
-						<img src="images_/comsol000_001a.png" alt="Conceptual model of the project."
-							style="width: 100%; border-radius: 8px;" />
-						<p class="caption">
-							Figure 1a: Conceptual model of the project.
-						</p>
-					</div>
-					<div style="flex: 1; min-width: 200px; display: flex; flex-direction: column;">
-						<img src="images_/comsol000_001b.png" alt="Geometric model of the project."
-							style="width: 100%; border-radius: 8px;" />
-						<p class="caption">
-							Figure 1b: Geometric model of the project.
-						</p>
-					</div>
+
+				<div class="image main">
+					<video autoplay loop muted playsinline 
+					alt="Simulation of contaminant transport in groundwater using COMSOL." loading="lazy">
+						<source src="assets/vids_/comsol/comsol000_etc2.webm" type="video/webm">
+						<source src="assets/vids_/comsol/comsol000_etc2.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<p class="caption">Simulation of contaminant transport in groundwater using COMSOL.</p>
 				</div>
 
-				<!-- Domain Breakdown -->
-				<h3>1. The Partially Saturated Zone (Vadose Layer)</h3>
-				<p>
-					The topmost layer contains both air and water in soil pores. Water—and contaminants—move under unsaturated
-					conditions governed by <strong>Richards’ Equation</strong>, a nonlinear PDE that accounts for variable saturation
-					and capillary pressure.
-				</p>
-				<blockquote>
-					💡 Richards’ Equation describes the movement of water in variably saturated soils. It's essential for capturing the
-					infiltration dynamics before water reaches the water table.
-				</blockquote>
-				<hr />
-				
-				<h3>2. The Fully Saturated Zone (Aquifer)</h3>
-				<p>
-					Below the vadose zone, the aquifer is fully saturated with water. Flow here is described using <strong>Darcy’s
-					Law</strong>, which relates hydraulic head gradients to flow velocities through a porous medium.
-				</p>
-				<hr />
-				
-				<h3>3. The Well Domain</h3>
-				<p>Water is pumped from a well modeled as a cylindrical pipe. Inside the well, flow is governed by <strong>Stokes
-					(Creeping Flow) equations</strong>, where viscous forces dominate due to low Reynolds numbers.
-				</p>
-				<hr />
-				
-				<h3>Contaminant Transport Equation</h3>
-				<p>
-					The contaminant moves via <strong>advection (carried by flow)</strong> and <strong>diffusion (spreading due to
-					concentration gradients)</strong>. In porous media, diffusion is modified by tortuosity and dispersion.
-				</p>
-				<hr />
-					
-					<h3>⚙️ Model Implementation and Coupling Strategy</h3>
-					<p>
-						This model involves strong coupling across the three zones, handled in COMSOL using multiphysics interfaces:
-					</p>
-					<ul>
-						<li>Continuity of <strong>concentration</strong> and <strong>flux</strong> is enforced at interfaces.</li>
-						<li>Pressure continuity is ensured between unsaturated and saturated zones.</li>
-						<li>Flow and transport equations are solved in two steps:
-							<ol>
-								<li><strong>Steady-state flow</strong> field is computed.</li>
-								<li><strong>Transient contaminant transport</strong> is simulated using that flow field.</li>
-							</ol>
-						</li>
-					</ul>
+				<p>Groundwater does not advertise its troubles. When a chemical spill hits the surface, the danger does
+					not always end with a quick cleanup. Beneath our feet, water slowly carries that contaminant through
+					unsaturated zones, aquifers, and in some cases, straight into our pumping wells. This project brings
+					that quiet process to light using COMSOL Multiphysics.</p>
+				<p>This simple conceptual model uses coupled physics—fluid flow through soil (Richards’ Equation),
+					saturated zone transport (Darcy’s Law), and velocity-driven flow near the well (Stokes flow)—to
+					reveal how a small surface event can spiral into a major water quality problem.</p>
+
+				<div class="image-row">
+					<div class="image-col">
+						<img src="assets/images_/comsol/comsol000_001a.png"
+							alt="Conceptual model showing soil layers and a pumping well." loading="lazy" />
+						<p class="caption">Figure 1a: Conceptual model of the project.</p>
+					</div>
+					<div class="image-col">
+						<img src="assets/images_/comsol/comsol000_001b.png"
+							alt="Geometric model used for the COMSOL simulation." loading="lazy" />
+						<p class="caption">Figure 1b: Geometric model of the project.</p>
+					</div>
+				</div>
 				<hr />
 
+				<!-- Model Overview -->
+				<h3>1. The Partially Saturated Zone (Vadose Layer)</h3>
+				<p>The topmost layer contains both air and water in soil pores. Water—and contaminants—move under
+					unsaturated conditions governed by <strong>Richards’ Equation</strong>, a nonlinear PDE that
+					accounts for variable saturation and capillary pressure.</p>
+				<blockquote>💡 Richards’ Equation describes the movement of water in variably saturated soils. It's
+					essential for capturing the infiltration dynamics before water reaches the water table.</blockquote>
+				<hr />
+
+				<h3>2. The Fully Saturated Zone (Aquifer)</h3>
+				<p>Below the vadose zone, the aquifer is fully saturated with water. Flow here is described using
+					<strong>Darcy’s Law</strong>, which relates hydraulic head gradients to flow velocities through a
+					porous medium.</p>
+				<hr />
+
+				<h3>3. The Well Domain</h3>
+				<p>Water is pumped from a well modeled as a cylindrical pipe. Inside the well, flow is governed by
+					<strong>Stokes (Creeping Flow) equations</strong>, where viscous forces dominate due to low Reynolds
+					numbers.</p>
+				<hr />
+
+				<h3>⚙️ Model Implementation and Coupling Strategy</h3>
+				<p>This model involves strong coupling across the three zones, handled in COMSOL using multiphysics
+					interfaces:</p>
+				<ul>
+					<li>Continuity of <strong>concentration</strong> and <strong>flux</strong> is enforced at
+						interfaces.</li>
+					<li>Pressure continuity is ensured between unsaturated and saturated zones.</li>
+					<li>Flow and transport equations are solved in two steps:
+						<ol>
+							<li><strong>Steady-state flow</strong> field is computed.</li>
+							<li><strong>Transient contaminant transport</strong> is simulated using that flow field.
+							</li>
+						</ol>
+					</li>
+				</ul>
+				<hr />
+				
 				<h3>📊 Results and Interpretations</h3>
 				<hr />
-					
+
 				<h4>Water Flow and Capture Zone</h4>
-				<span class="image main">
-					<img src="images_/comsol000_002.png"
-						alt="3D image showing the velocity magnitude and streamlines in both aquifer and well domains." />						
-					<p class="caption">
-						Figure 2: 3D image showing the velocity magnitude and streamlines in both aquifer and well domains.
-						Left shows creeping flow in the well (Stokes), right shows Darcy flow in the porous aquifer.
-						Pumping creates a clear capture zone.
-					</p>
-				</span>
-				<p>
-					The well actively pulls water from the aquifer, creating a steep pressure gradient. Streamlines bend toward the well,
-					showing converging flow paths. The velocity in the well pipe is roughly 100× greater than in the aquifer, requiring
-					separate color bars for meaningful visualization.
-				</p>
+				<div class="image main">
+					<img src="assets/images_/comsol/comsol000_002.png"
+						alt="3D image showing velocity magnitude and streamlines in aquifer and well domains."
+						loading="lazy" />
+					<p class="caption">Figure 2: 3D image showing the velocity magnitude and streamlines in both aquifer
+						and well domains. Pumping creates a clear capture zone.</p>
+				</div>
+				<p>The well actively pulls water from the aquifer, creating a steep pressure gradient. Streamlines bend
+					toward the well, showing converging flow paths. The velocity in the well pipe is roughly 100×
+					greater than in the aquifer, requiring separate color bars for meaningful visualization.</p>
 
 				<h4>Pressure Distribution</h4>
-				<span class="image main">
-					<img src="images_/comsol000_003.png"
-						alt="3D display of the pressure distribution across the model." />
-					<p class="caption">
-						Figure 3: 3D display of the pressure distribution across the model.
-						The highest hydraulic head occurs near recharge zones; lowest
-						head at the well. Gradients drive groundwater flow.
-					</p>
-				</span>
-				<p>
-					The natural pressure gradient and the role of pumping in altering subsurface flow. 
-					The gradient shows how the system moves water from the aquifer edges toward the well. 
-					This drives contaminant migration as well.
-				</p>
+				<div class="image main">
+					<img src="assets/images_/comsol/comsol000_003.png"
+						alt="3D display of the pressure distribution across the model." loading="lazy" />
+					<p class="caption">Figure 3: 3D display of the pressure distribution. The highest hydraulic head
+						occurs near recharge zones; lowest head at the well.</p>
+				</div>
+				<p>The natural pressure gradient and the role of pumping in altering subsurface flow. The gradient shows
+					how the system moves water from the aquifer edges toward the well. This drives contaminant migration
+					as well.</p>
 
 				<h4>Contaminant Migration and Flux</h4>
-				
-				<span class="image main">
-					<img src="images_/comsol000_004.png" alt="Contaminant concentration field with streamlines of total mass flux." />
-					<p class="caption">
-						Figure 4: Contaminant concentration field with streamlines of total mass flux. 
-						High concentrations are observed in the well over time. 
-						Left: Darcy domain. Right: Creeping flow domain.
-				</span>
-				<p>
-					The contaminant plume moves downward through the vadose zone, enters the aquifer, and is pulled toward the well. 
-					The well becomes a contamination hotspot, with concentrations rising rapidly once breakthrough occurs. 
-					This underscores the risk posed by pumping wells near surface contamination sources.
-				</p>
-				
+				<div class="image main">
+					<img src="assets/images_/comsol/comsol000_004.png"
+						alt="Contaminant concentration field with streamlines of total mass flux." loading="lazy" />
+					<p class="caption">Figure 4: Contaminant concentration field with streamlines of total mass flux.
+						High concentrations are observed in the well over time.</p>
+				</div>
+				<p>The contaminant plume moves downward through the vadose zone, enters the aquifer, and is pulled
+					toward the well. The well becomes a contamination hotspot, with concentrations rising rapidly once
+					breakthrough occurs. This underscores the risk posed by pumping wells near surface contamination
+					sources.</p>
+
 				<h4>Time-Series: Breakthrough at the Well</h4>
-				<span class="image main">
-					<img src="images_/comsol000_005.png" alt="Time evolution of contaminant concentration at the well outlet." />
-					<p class="caption">
-						Figure 5: Time evolution of contaminant concentration at the well outlet. 
-						Concentration sharply increases around day 50 and stabilizes near a maximum by day 180.
-				</span>
-				<p>
-					Initially, the well water is clean. As time progresses, the contaminant front reaches the well, 
-					causing a rapid increase in concentration. This type of time-series (breakthrough curve) is critical 
-					for estimating contamination risks, designing monitoring schedules, and planning treatment strategies.
-				</p>
+				<div class="image main">
+					<img src="assets/images_/comsol/comsol000_005.png"
+						alt="Graph showing time evolution of contaminant concentration at the well outlet."
+						loading="lazy" />
+					<p class="caption">Figure 5: Time evolution of contaminant concentration at the well outlet.
+						Concentration sharply increases around day 50.</p>
+				</div>
+				<p>Initially, the well water is clean. As time progresses, the contaminant front reaches the well,
+					causing a rapid increase in concentration. This type of time-series (breakthrough curve) is critical
+					for estimating contamination risks, designing monitoring schedules, and planning treatment
+					strategies.</p>
+
+				<hr />
 
 				<h3>🧠 Simplified Insights</h3>
-				<ul>
-					<li>Water Drives Contaminant Spread: 
-						Contaminants follow the groundwater flow. Pumping creates a strong draw toward the well, 
-						pulling in pollution.
-					</li>
-					<li>High Risk for Wells Near Surface Spills: 
-						The model shows that even a small surface release can lead to well
-					contamination if there is sustained pumping.
-					</li>
-					<li>Time Matters: 
-						There is a lag time between contamination and detection. If only snapshot data is used, 
-						you may miss the breakthrough.
-					</li>
-					<li>Model is Flexible: 
-						Parameters can be varied easily in COMSOL to run "what-if" scenarios—e.g., higher pumping,
-						deeper wells, alternative source locations.
-					</li>
-				</ul>
-				<p>
-					In essence, this model provides a virtual laboratory to study groundwater contamination, 
-					helping to predict the fate and transport of pollutants and evaluate remediation strategies.
-				</p>
-
-
-				<!-- Key Features -->
-				<h3>Key Features</h3>
-				<ul>
-					<li>Multi-physics simulation (Richards’, Darcy, Stokes)</li>
-					<li>Visualizes contaminant transport and risk zones</li>
-					<li>Supports scenario analysis for groundwater management</li>
-				</ul>
-				<!-- Technologies Used -->
-				<h3>Technologies Used</h3>
-				<ul>
-					<li>COMSOL Multiphysics</li>
-				</ul>
-
-		<!-- Back Button -->
-		<a href="index.html" class="button">Back to Portfolio</a>
-		</section>
+					<ul>
+						<li><strong>Water Drives Contaminant Spread:</strong> Contaminants follow the groundwater flow.
+							Pumping creates a strong draw toward the well, pulling in pollution.</li>
+						<li><strong>High Risk for Wells Near Surface Spills:</strong> The model shows that even a small
+							surface release can lead to well contamination if there is sustained pumping.</li>
+						<li><strong>Time Matters:</strong> There is a lag time between contamination and detection. If only
+							snapshot data is used, you may miss the breakthrough.</li>
+						<li><strong>Model is Flexible:</strong> Parameters can be varied easily in COMSOL to run "what-if"
+							scenarios—e.g., higher pumping, deeper wells, alternative source locations.</li>
+					</ul>
+				<p>In essence, this model provides a virtual laboratory to study groundwater contamination, helping to
+					predict the fate and transport of pollutants and evaluate remediation strategies.</p>
+				
+				<hr />
+				
+				<!-- Key Features & Technologies -->
+				<h3>Key Features & Technologies</h3>
+				<div class="features-row">
+					<div class="features-col">
+						<h4>Key Features</h4>
+						<ul>
+							<li>Multi-physics simulation (Richards’, Darcy, Stokes)</li>
+							<li>Visualizes contaminant transport and risk zones</li>
+							<li>Supports scenario analysis for groundwater management</li>
+						</ul>
+					</div>
+					<div class="features-col">
+						<h4>Technologies Used</h4>
+						<ul>
+							<li>COMSOL Multiphysics</li>
+						</ul>
+					</div>
+				</div>
+				<hr />
+				<a href="index.html#projects" class="button">Back to All Projects</a>
+			</section>
 		</div>
-		
 		<!-- Footer -->
 		<footer id="footer">
 			<section>
-				<h3>Connect with me</h3>
-				<ul class="icons alt">
-					<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin"><span
-								class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github"><span
-								class="label">GitHub</span></a></li>
-				</ul>
+				<h2>Reach Out</h2>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="alt">
+				<section>
+					<h3>Connect with me</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
+								<span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
+								<span class="label">GitHub</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+								<span class="label">Google Scholar</span></a></li>
+					</ul>
+				</section>
 			</section>
 		</footer>
-
-		<!-- Copyright -->
+		<!-- Copyright-->
 		<div id="copyright">
 			<ul>
 				<li>&copy; Nii Amarquaye Commey</li>
@@ -350,7 +265,6 @@
 			</ul>
 		</div>
 	</div>
-
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -359,6 +273,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

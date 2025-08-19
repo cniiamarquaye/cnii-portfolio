@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
+	Massively by HTML5 UP (Restructured by CNII)
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
@@ -12,105 +12,21 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-		<style>
-			/* Custom background blur for visual interest */
-			body::before {
-				content: "";
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100vw;
-				height: 100vh;
-				background: url('images_/background_blur.jpg') center center / cover no-repeat;
-				filter: blur(8px) brightness(0.7);
-				z-index: -1;
-			}
 		
-			/* Font Family for the whole site */
-			body,
-			html {
-				font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-			}
-		
-			/* Main Headings */
-			h1 {
-				font-size: 2.6em;
-				font-weight: 700;
-				letter-spacing: 0.03em;
-				line-height: 1.1;
-				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-			}
-		
-			/* Section Headings */
-			h2 {
-				font-size: 2em;
-				font-weight: 600;
-				letter-spacing: 0.02em;
-				line-height: 1.2;
-				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-			}
-		
-			/* Subsection Headings */
-			h3 {
-				font-size: 1.4em;
-				font-weight: 500;
-				letter-spacing: 0.01em;
-				line-height: 1.3;
-				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-			}
-		
-			/* Minor Headings */
-			h4 {
-				font-size: 1.1em;
-				font-weight: 500;
-				letter-spacing: 0.01em;
-				line-height: 1.4;
-				font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-			}
-		
-			/* Captions under images */
-			.caption {
-				font-size: 1em;
-				font-style: italic;
-				color: #666;
-				text-align: center;
-				margin-top: 0.5em;
-				font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-			}
-		
-			/* Normal paragraph text */
-			p,
-			li {
-				font-size: 1em;
-				font-weight: 400;
-				line-height: 1.7;
-				color: #222;
-				font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-			}
-		
-			/* Optional: Make links stand out */
-			a {
-				color: #0077cc;
-				text-decoration: none;
-			}
-		
-			a:hover {
-				text-decoration: underline;
-			}
-
-			#copyright {
-    			display: block !important;
-				color: #bbb;
-				text-align: center;
-				margin: 2em 0 1em 0;
-				font-size: 1em;
-			}
-		</style>
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9WX8V2Q18"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-R9WX8V2Q18');
+		</script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
+				<a href="#wrapper" class="back-to-top button icon solid solo fa-arrow-up scrolly">Top</a>
 
 				<!-- Intro -->
 					<div id="intro">
@@ -121,51 +37,53 @@
 						<h2>
 							Turning Satellite Data into Sustainability Solutions
 						</h2>
-						<p style="color: #fff;"></p>
+						<p>
 							Welcome to my digital portfolio!<br />
 							Explore my work in geospatial science, and environmental sustainability, among others.
-						<ul class="actions"></ul>
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
+						</p>
 					</div>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="#about">About Nii</a></li> <!-- Added About tab -->
+							<li><a href="profile.html">About Nii</a></li>
 							<li><a href="#projects">Projects</a></li>
 							<li><a href="#footer">Contact</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
-								<span class="label">LinkedIn</span>
-							</a></li>
-							<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github">
-								<span class="label">GitHub</span>
-							</a></li>
+								<span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/cniiamarquaye" class="icon brands alt fa-github">
+								<span class="label">GitHub</span></a></li>
+							<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+								<span class="label">Google Scholar</span></a></li>
 						</ul>
+					
+						<button class="hamburger-menu" id="hamburger-menu" aria-label="Open navigation menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						
 						<!-- About Section -->
-						<section id="about" style="margin-bottom: 2em;">
+						<section id="about">
 							<article class="post">
 								<header class="major">
-									<h1>About Me</h1>
+									<h1>Brief About Me</h1>
 									<span class="image left">
-										<img src="images_/profile000.jpg" alt="Nii Amarquaye Commey" 
-										style="max-width:150px; border-radius:50%;" />
+										<img src="assets/images_/profile000.jpg" alt="Nii Amarquaye Commey" 
+										class="profile-picture" loading="lazy" />
 										</span>
 								</header>
 								<p>
-								I am <strong>Nii Amarquaye Commey (PhD)</strong>, a geospatial scientist and environmental consultant. My expertise
-								includes GIS, remote sensing, and environmental assessment. I value collaboration, innovation, and impact-driven
-								solutions, and I am passionate about mapping, coding, and creative arts.
-								</p>
-								<p>
+									I am <strong>Nii Amarquaye Commey (PhD)</strong>, a geospatial scientist and environmental consultant. 
+									My expertise includes GIS, remote sensing, and environmental assessment. I value collaboration, innovation, 
+									and impact-driven solutions, and I am passionate about mapping, coding, and creative arts. <br />
 									With a blend of technical rigor and creative problem-solving, I turn raw spatial
 									data into actionable solutions for environmental sustainability, and climate resilience. 
 									Whether scripting workflows, designing interactive maps, or undertaking environmental assessments, I 
@@ -176,7 +94,7 @@
 								</p>
 							</article>
 						</section>
-
+						
 						<!-- Projects Main Heading -->
 						<section id="projects">
 							<header class="major">
@@ -188,19 +106,22 @@
 							<article class="post featured">
 								<header class="major">
 									<h2>
-										<a href="project000.html">Modelling Groundwater Contamination</a>
+										<a href="project003.html">Rainfall-Runoff and Non-Point Source Pollution Loads<br />
+										in the Sakumo Catchment</a>
 									</h2>
 									<p>
-										Ever wondered how a spill on the ground ends up in a drinking water well? That is exactly what I explored with this
-										COMSOL-based model. I simulated how water and contaminants move underground. Starting from the surface, filtering through
-										soil, and getting pulled into a pumping well. The model uses a combo of physics (Richards’, Darcy, and Stokes) to show
-										just how quickly a well can draw in pollution, even from far away. It is a great visual tool for understanding risk,
-										testing “what-if” scenarios, and planning smarter groundwater protection.
+										When it rains in a city, the water doesn’t just vanish—it races off streets and fields, picking up nutrients and
+										pollution along the way. I mapped how 30 years of land use change turned everyday rainfall into a driver of
+										runoff and nutrient loading, showing why wetlands like Sakumo are under pressure and what that means for water,
+										ecosystems, and people.
 									</p>
 								</header>
-								<a href="project000.html" class="image main"><img src="images_/comsol000_etc2.gif" alt="" /></a>
+								<a href="project003.html" class="image main">
+									<img src="assets/images_/qnspect/SK_TNTrend.png" 
+									alt="Spatial Distribution of Generated Total Nitrogen." loading="lazy" />
+								</a>
 								<ul class="actions special">
-									<li><a href="project000.html" class="button large">Read More</a></li>
+									<li><a href="project003.html" class="button">Read More</a></li>
 								</ul>
 							</article>
 
@@ -209,10 +130,65 @@
 								<article>
 									<header>
 										<h2>
+											<a href="project004.html">land use and land cover (LULC) change <br />
+												in Ghana’s Sakumo catchment</a>
+										</h2>
+									</header>
+									<a href="project004.html" class="image fit">
+										<video autoplay loop muted playsinline loading="lazy">
+											<source src="assets/vids_/qnspect/LULC SK 1990-2020.webm" type="video/webm">
+											<source src="assets/vids_/qnspect/LULC SK 1990-2020.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</a>
+									<p>
+										Cities don’t just grow upwards—they spill outwards, reshaping land and water. In this study, I tracked three
+										decades of land use and land cover (LULC) change in Ghana’s Sakumo catchment, revealing how urban sprawl 
+										transformed hydrology, water qualities and livelihoods. A story of how landscapes change, and why wetlands 
+										and communities downstream feel the pressure first.
+									</p>
+									<ul class="actions special">
+										<li><a href="project004.html" class="button">Pending</a></li>
+									</ul>
+								</article>
+								<article>
+									<header class="major">
+										<h2>
+											<a href="project000.html">Modelling Groundwater Contamination</a>
+										</h2>
+									</header>
+										<a href="project000.html" class="image main">
+											<video autoplay loop muted playsinline loading="lazy">
+												<source src="assets/vids_/comsol/comsol000_etc2.webm" type="video/webm">
+												<source src="assets/vids_/comsol/comsol000_etc2.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+										</a>
+										<p>
+											Ever wondered how a spill on the ground ends up in a drinking water well? That is exactly what I explored with
+											this COMSOL-based model. I simulated how water and contaminants move underground. Starting from the surface,
+											filtering through soil, and getting pulled into a pumping well. The model uses a combo of physics (Richards’, Darcy, 
+											and Stokes) to show just how quickly a well can draw in pollution, even from far away. It is a great visual tool 
+											for understanding risk, testing “what-if” scenarios, and planning smarter groundwater protection.
+										</p>
+									</header>
+									<ul class="actions special">
+										<li><a href="project000.html" class="button">Read More</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2>
 											<a href="project001.html">Pesticide Transport and Reaction in Soil</a>
 										</h2>
 									</header>
-									<a href="project001.html" class="image fit"><img src="images_/comsol001_007c.gif" alt="" /></a>
+									<a href="project001.html" class="image fit">
+										<video autoplay loop muted playsinline loading="lazy">
+											<source src="assets/vids_/comsol/comsol001_007c.webm" type="video/webm">
+											<source src="assets/vids_/comsol/comsol001_007c.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</a>
 									<p>
 										This one dives into the messy afterlife of Aldicarb, a pesticide that does not just disappear once it hits the soil.
 										Using COMSOL, I modeled how it moves, reacts, and breaks down into by-products. Some of which stick around longer and
@@ -230,7 +206,8 @@
 											<a href="project002.html">Terzaghi Compaction</a>
 										</h2>
 									</header>
-									<a href="project002.html" class="image fit"><img src="images_/comsol002_002.png" alt="" /></a>
+									<a href="project002.html" class="image fit">
+										<img src="assets/images_/comsol/comsol002_002.png" alt="" loading="lazy"/></a>
 									<p>
 										Have you ever wondered what happens underground when you apply weight to saturated soils? A deceptively slow, silent process
 										that has big implications for groundwater systems. I used COMSOL to simulate Terzaghi’s 1D consolidation theory, tracking how excess
@@ -242,42 +219,8 @@
 									<ul class="actions special">
 										<li><a href="project002.html" class="button">Read More</a></li>
 									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date"> Active on Fri-08-Aug-2025</span>
-										<h2>
-											<a href="#">Rainfall-Runoff and Non-Point Source Pollution Loads<br />
-												in the Sakumo Catchment</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images_/loading001.gif" alt="" /></a>
-									<p>
-										
-									</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Pending</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date"> Active on Fri-08-Aug-2025</span>
-										<h2>
-											<a href="#">Biot Poroelasticity</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images_/loading001.gif" alt="" /></a>
-									<p>
-										
-									</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Pending</a></li>
-									</ul>
-								</article>
+								</article>	
 							</section>
-
-						<!-- Footer -->
-							
 					</div>
 
 				<!-- Footer -->
@@ -308,8 +251,15 @@
 							<section>
 								<h3>Connect with me</h3>
 								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/4m4rx" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
+										<span class="label">LinkedIn</span>
+									</a></li>
+									<li><a href="https://github.com/cniiamarquaye" class="icon brands alt fa-github">
+										<span class="label">GitHub</span>
+									</a></li>
+									<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+										<span class="label">Google Scholar</span>
+									</a></li>
 								</ul>
 							</section>
 						</section>
@@ -319,7 +269,6 @@
 					<div id="copyright">
 						<ul><li>&copy; Nii Amarquaye Commey</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
-
 			</div>
 
 		<!-- Scripts -->

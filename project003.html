@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	Massively by HTML5 UP (Restructured by CNII)
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sakumo Catchment: 30 Years of Change | Nii Amarquaye Commey Portfolio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="assets/css/main.css">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css">
+	</noscript>
+	<style>
+		/* Custom map container styling */
+		#map {
+			width: 100%;
+			height: 400px;
+			border-radius: 10px;
+			margin-top: 1rem;
+		}
+	</style>
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9WX8V2Q18"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-R9WX8V2Q18');
+	</script>
+</head>
+
+<body class="is-preload">
+	<div id="wrapper" class="fade-in">
+		<a href="#wrapper" class="back-to-top button icon solid solo fa-arrow-up scrolly">Top</a>
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Nii Amarquaye Commey</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="profile.html">About Nii</a></li>
+				<li class="active"><a href="index.html#projects">Projects</a></li>
+				<li><a href="#footer">Contact</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands fa-linkedin" target="_blank"><span
+							class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/cniiamarquaye" class="icon brands fa-github" target="_blank"><span
+							class="label">GitHub</span></a></li>
+				<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+						<span class="label">Google Scholar</span></a></li>
+			</ul>
+			<button class="hamburger-menu" id="hamburger-menu" aria-label="Open navigation menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<section class="post">
+				<header class="major">
+					<h1>🌍 Sakumo Catchment: 30 Years of Change</h1>
+					<p>Runoff & Pollution Trends • Remote Sensing • GIS Modelling</p>
+				</header>
+		
+				<div class="overview-row">
+					<div class="overview-col-text">
+						<h2>🔍 Project Snapshot</h2>
+						<p>The Sakumo Ramsar Site, a wetland of global ecological importance, is fighting a slow battle
+							against urbanization and pollution. This project combines three decades of satellite
+							imagery, GIS analysis, and hydrological modelling to quantify how rapid land use change has
+							altered the catchment's hydrology and increased nutrient pollution, threatening a vital
+							ecosystem.</p>
+						<div class="stats-grid">
+							<div class="stat-card">
+								<h3>🏙️ Urban Growth</h3>
+								<p>+44.7%</p>
+							</div>
+							<div class="stat-card">
+								<h3>💧 Runoff Increase</h3>
+								<p>+110.3 mm/yr</p>
+							</div>
+							<div class="stat-card">
+								<h3>🧪 Total Nitrogen</h3>
+								<p>+0.22 kg/yr</p>
+							</div>
+							<div class="stat-card">
+								<h3>🧪 Total Phosphorus</h3>
+								<p>+0.34 kg/yr</p>
+							</div>
+						</div>
+					</div>
+					<div class="overview-col-map">
+						<div id="map"></div>
+					</div>
+				</div>
+
+			<!-- Key Objectives -->
+			<h2>📌 Key Objectives</h2>
+            <p>
+                 <li>Quantify <strong>runoff volumes</strong> and <strong>non-point source pollutant loads</strong>
+                 (TN & TP) over 30 years.</li>
+                 <li>Map <strong>pollution hotspots</strong> at the sub-catchment scale.</li>
+                 <li>Assess <strong>how urban growth and population</strong> drive hydrological changes.</li>
+                 <li>Provide a <strong>replicable workflow</strong> for data-scarce regions.</li>
+            </p>
+			<hr />
+
+			<!-- Methodology -->
+			<h2>🛠 Methodology in Action</h2>
+				<p>The project employed a systematic approach, combining remote sensing data with GIS modeling. Key
+					datasets included:</p>
+			<div class="figures-grid">
+				<div class="figure-item">
+					<h4>LULC Change Maps for 1990, 2000, 2011 and 2020 (produced from Landsat imagery).</h4>
+					<img src="assets/images_/qnspect/LULC SK 1990-2020.gif" alt="Sakumo LULC Changes">
+					<p class="caption">Animation showing the LULC maps of the Sakumo catchment for 1990, 2000, 2011 and 2020.</p>
+				</div>
+				<div class="figure-item">
+					<h4>Precipitation Trends</h4>
+					<img src="assets/images_/qnspect/SK_PrecipTrend.png" alt="Precipitation trend graph">
+					<p class="caption">Temporal precipitation trends across Sakumo sub-catchments.</p>
+				</div>
+			</div>
+			<div class="figures-grid">
+				<div class="figure-item">
+					<h4>Topography (from the SRTM) for hydrological modelling.</h4>
+					<img src="assets/images_/qnspect/SK_DEM.png" alt="Topography DEM" class="low-res-fix"
+					style="width:40%;border-radius:10px;">
+					<p class="caption">SRTM DEM of Sakumo catchment (low-res version).</p>
+				</div>
+				<div class="figure-item">
+					<h4>GlobPOP population density (checked against census data).</h4>
+					<img src="assets/images_/qnspect/SK_GlobPOP_1990-2020.gif"
+						alt="Sakumo catchment population density distribution maps for 1990, 2000, 2011 and 2020." loading="lazy"
+						style="width:40%;border-radius:10px;">
+					<p class="caption">
+						Sakumo catchment population density distribution maps for 1990, 2000, 2011 and 2020.
+					</p>
+				</div>
+			</div>
+			
+				<div class="figure-item">
+					<h4>FAO HYSOGs250m Soil Data</h4>
+					<img src="assets/images_/qnspect/SK_SoilHYSOG.png" alt="FAO HYSOG soils"
+						style="max-width:60%;margin:auto;display:block;">
+					<p class="caption">Hydrologic Soil Groups distribution in the Sakumo catchment (FAO-HYSOGs250m).</p>
+				</div>
+			
+			<hr />
+
+	<section class="section two-col">
+		<div class="text">
+			<h2>💡 Key Insights</h2>
+			<p>
+				<li><strong>Urban sprawl</strong> is the main culprit—replacing forests, wetlands, and farmland with impervious surfaces.</li>
+				<li><strong>Hotspots</strong> of <strong>TN &amp; TP</strong> emerged in S2 and S3, where industrial activity 
+				and dense housing are concentrated. This indicates a need for targeted management.</li>
+				<div class="image">
+					<img src="assets/images_/qnspect/SK_TNTrend.png" alt="Spatial Distribution of Generated Total Nitrogen."
+						style="width:100%;border-radius:10px;">
+					<p class="caption">
+						Spatial distribution of geneated Total Nitrogen in the Sakumo catchment for 1990, 2000, 2011 and 2020.
+					</p>
+				<div class="image">
+					<img src="assets/images_/qnspect/SK_TPTrend.png" alt="Spatial Distribution of Generated Total Phosphorus."
+						style="width:100%;border-radius:10px;">
+					<p class="caption">
+						Spatial distribution of generated Total Phosphorus in the Sakumo catchment for 1990, 2000, 2011 and 2020.
+					</p>
+				</div>
+				<li><strong>Runoff</strong> increased by <strong>110.3 mm/year</strong> from 1990 to 2020, 
+				driven by increase in impervious surfaces.</li>
+				<div class="figures-grid">
+					<div class="figure-item">
+						<img src="assets/images_/qnspect/SK_RunoffSpatialDistribution.jpg"
+							alt="Spatial Distribution of Generated Total Phosphorus." style="width:100%;border-radius:10px;">
+						<p class="caption">
+							Spatial distribution of generated Total Phosphorus in the Sakumo catchment for 1990, 2000, 2011 and 2020.
+						</p>
+					</div>
+					<div class="figure-item">
+						<img src="assets/images_/qnspect/SK_RunoffTrend.png"
+							alt="Temporal Distribution of Generated Runoff over the sub-catchments." style="width:100%;border-radius:20px;">
+						<p class="caption">
+							Temporal distribution of generated runoff in the Sakumo catchment.
+						</p>
+					</div>
+				</div>
+				
+				<li><strong>TN</strong> loads rose by <strong>0.22 kg/year</strong> and <strong>TP</strong> by <strong>0.34 kg/year</strong>,
+				indicating growing nutrient pollution.</li>
+				<div class="image">
+					<img src="assets/images_/qnspect/SK_graphTNTPTrend.png"
+						alt="Temporal Distribution of Generated Total Phosphorus over the sub-catchments."
+						style="width:100%;border-radius:20px;">
+					<p class="caption">
+						Temporal distribution of generated pollutants (TN-left; TP-right) in the Sakumo catchment.
+					</p>
+				</div>
+				<div class="insight-item">
+					<div class="text-content">
+						<li><strong>Water quality trends</strong> from literature match the increases in pollutant loads,
+							signalling growing eutrophication threats.</li>
+					</div>
+				</div>
+				<div class="figures-grid">
+					<div class="figure-item">
+						<img src="assets/images_/qnspect/SK_HistoricStudyTrend.png"
+							alt="Temporal Distribution of Generated Runoff over the sub-catchments."
+							style="width:100%;border-radius:20px;">
+						<p class="caption">
+							Historical temporal trend of water quality in the Sakumo Ramsar site.
+						</p>
+					</div>
+					<div class="figure-item">
+						<img src="assets/images_/qnspect/SK_CurrentStudyTrend.png"
+							alt="Temporal Distribution of Generated Total Phosphorus over the sub-catchments."
+							style="width:100%;border-radius:20px;">
+						<p class="caption">
+							Current study temporal trend of water quality in the Sakumo Ramsar site.
+						</p>
+					</div>
+				</div>
+				</div>
+				<li>The modelling workflow offers a <strong>cost-effective tool</strong> for other regions with limited monitoring data.</li>
+			</p>
+		</div>
+	</section>
+	<hr />
+
+	<h2>🌱 Why It Matters</h2>
+	<p>
+		<li>For Environmentalists: Highlights the urgent need for sustainable urban planning in wetland areas.</li>
+		<li>For Conservationists: Provides critical data to protect the Sakumo Ramsar site's biodiversity.</li>
+		<li>For Policymakers: Delivers actionable maps and metrics to guide wetland conservation strategies.</li>
+		<li>For Communities: Highlights the link between urban growth and declining ecosystem health.</li>
+	</p>
+	
+	<h2>🔧 Future Directions</h2>
+	<p>
+		<li>Expand the analysis to include <strong>climate change impacts</strong> on runoff and pollution.</li>
+		<li>Incorporate <strong>real-time monitoring</strong> data to validate and refine the model.</li>
+		<li>Map <strong>industrial vs. residential sources</strong> at high resolution.</li>
+		<li>Integrate <strong>reservoir hydrology</strong> into runoff modelling.</li>
+		<li>Scale workflow to other data-scarce sites.</li>
+	</p>
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	
+	<!-- Map container -->
+	<div id="map"></div>
+	
+	<style>
+		#map {
+			width: 100%;
+			height: 500px;
+			/* Adjust height as needed */
+		}
+	</style>
+	
+	<!-- Leaflet JS -->
+	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+	
+	<script>
+		// Initialize the map centered on Sakumo
+		var map = L.map('map').setView([5.65, -0.03], 11);
+
+		// Add OpenStreetMap base layer
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '© OpenStreetMap contributors'
+		}).addTo(map);
+
+		// Add pinpoint marker
+		L.marker([5.65, -0.03])
+			.addTo(map)
+			.bindPopup("<b>Sakumo Ramsar Site</b><br>Catchment under study.")
+			.openPopup();
+
+		// Add Sakumo boundary GeoJSON (faded style)
+		var sakumoBoundary = new L.GeoJSON.AJAX("assets/geojson/SK_MapOverlay001.geojson", {
+			style: {
+				color: "#808080",     // orange border
+				weight: 3,            // thin outline
+				fillColor: "#808080", // same as outline, but faded
+				fillOpacity: 0.25     // transparency (0 = invisible, 1 = solid)
+			}
+		}).addTo(map);
+
+		// Zoom to boundary once it loads
+		sakumoBoundary.on('data:loaded', function () {
+			map.fitBounds(sakumoBoundary.getBounds());
+		});
+	</script>
+		<!-- Back Button -->
+		<a href="index.html" class="button">Back to Portfolio</a>
+		</section>
+		</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<h2>Reach Out</h2>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="alt">
+				<section>
+					<h3>Connect with me</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin" target="_blank"
+								rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/cniiamarquaye" class="icon brands alt fa-github" target="_blank"
+								rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+								<span class="label">Google Scholar</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+				
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Nii Amarquaye Commey</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</div>
+		
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+				
+</html>

@@ -22,8 +22,35 @@ SOFTWARE.
 
 ---
 
-This portfolio site uses the "Massively" template by HTML5 UP (https://html5up.net), which is free for personal and commercial use under the Creative Commons Attribution 3.0 Unported (CC BY 3.0) license. Please retain their attribution in the footer as required.
+## Third-Party Components and Attributions
 
-All original project content, images, and code (except template files and demo images) are the intellectual property of Nii Amarquaye Commey unless otherwise credited. You are welcome to use, adapt, and share this work, but please provide appropriate credit and retain all relevant attributions.
+This portfolio site uses the "Massively" template by [HTML5 UP](https://html5up.net),  
+licensed under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/).  
 
-For questions, collaboration, or permissions beyond the scope of this license, please contact me
+- If you reuse or modify this site, you must retain the required HTML5 UP attribution in the footer or elsewhere, as per their license.
+
+---
+
+## Images, Datasets, and Other Media
+
+- All original content, images, datasets, and code in this repository are the intellectual property of **Nii Amarquaye Commey**, unless otherwise credited.
+- Some figures, diagrams, or datasets may be sourced from third-party providers under separate licenses.
+- Where applicable, attributions for these assets are listed in the "Image Credits" section of the [README](README.md).
+
+> **Important:** Third-party images and datasets are not licensed under MIT unless explicitly stated.
+
+---
+
+## Academic Use and Citations
+
+If referencing **any findings, models, or figures** from this portfolio in academic work, please cite:
+
+> Commey, N. A. (2025). *Digital Portfolio: Research in Geospatial Science, Hydrogeology, and Environmental Intelligence*.  
+> [https://cniiamarquaye.github.io](https://cniiamarquaye.github.io)
+
+---
+
+## Permissions Beyond This License
+
+For academic reuse, permissions, collaboration inquiries, or usage requests that fall outside the scope of this license, 
+please contact: 📧 **cniiamar-research@yahoo.com** | **cniiamarquaye@yahoo.com**

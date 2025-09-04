@@ -1,145 +1,142 @@
-/*
-	Massively by HTML5 UP (Refactored Version)
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// --- DOMContentLoaded ensures script runs after HTML is parsed ---
+document.addEventListener('DOMContentLoaded', () => {
 
-(function($) {
+    const body = document.body;
+    const nav = document.getElementById('nav');
+    const hamburger = document.querySelector('.hamburger-menu');
+    const backBtn = document.querySelector('.back-to-top');
+    const wrapper = document.getElementById('wrapper');
+    const intro = document.getElementById('intro');
+    const sections = document.querySelectorAll('section[id]');
+    const defaultTitle = document.title;
 
-	var $window = $(window),
-		$body = $('body'),
-		$wrapper = $('#wrapper'),
-		$header = $('#header'),
-		$nav = $('#nav'),
-		$main = $('#main');
+    // -----------------------------
+    // MOBILE HAMBURGER MENU
+    // -----------------------------
+    if(hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            body.classList.toggle('is-nav-active');
 
-	// Breakpoints.
-	breakpoints({
-		default:   ['1681px',  null       ],
-		xlarge:    ['1281px',  '1680px'   ],
-		large:     ['981px',   '1280px'   ],
-		medium:    ['737px',   '980px'    ],
-		small:     ['481px',   '736px'    ],
-		xsmall:    ['361px',   '480px'    ],
-		xxsmall:   [null,      '360px'    ]
-	});
-
-	// Parallax background effect.
-	$.fn._parallax = function(intensity) {
-		// (This function can be left as is, it doesn't conflict)
-        var $window = $(window), $this = $(this);
-        if (this.length == 0 || intensity === 0) return $this;
-        if (this.length > 1) {
-            for (var i=0; i < this.length; i++) $(this[i])._parallax(intensity);
-            return $this;
-        }
-        if (!intensity) intensity = 0.25;
-        $this.each(function() {
-            var $t = $(this), $bg = $('<div class="bg"></div>').appendTo($t), on, off;
-            on = function() {
-                $bg.removeClass('fixed').css('transform', 'matrix(1,0,0,1,0,0)');
-                $window.on('scroll._parallax', function() {
-                    var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
-                    $bg.css('transform', 'matrix(1,0,0,1,0,' + (pos * intensity) + ')');
-                });
-            };
-            off = function() {
-                $bg.addClass('fixed').css('transform', 'none');
-                $window.off('scroll._parallax');
-            };
-            if (browser.name == 'ie' || browser.name == 'edge' || window.devicePixelRatio > 1 || browser.mobile) off();
-            else { breakpoints.on('>large', on); breakpoints.on('<=large', off); }
+            // Animate hamburger lines
+            hamburger.querySelectorAll('span').forEach((span, idx) => {
+                if(body.classList.contains('is-nav-active')){
+                    if(idx === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    if(idx === 1) span.style.opacity = '0';
+                    if(idx === 2) span.style.transform = 'rotate(-45deg) translate(6px, -6px)';
+                } else {
+                    span.style.transform = '';
+                    span.style.opacity = '';
+                }
+            });
         });
-        $window.off('load._parallax resize._parallax').on('load._parallax resize._parallax', function() { $window.trigger('scroll'); });
-        return $(this);
-	};
+    }
 
-	// Play initial animations on page load.
-	$window.on('load', function() {
-		window.setTimeout(function() {
-			$body.removeClass('is-preload');
-		}, 100);
-	});
+    // -----------------------------
+    // ACTIVE NAV TAB HIGHLIGHTING
+    // -----------------------------
+    const navLinks = document.querySelectorAll('#nav ul.links a');
+    const current = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
 
-	// Scrolly.
-	$('.scrolly').scrolly();
+    navLinks.forEach(a => {
+        const li = a.parentElement;
+        const href = a.getAttribute('href')?.split('/').pop().toLowerCase() || '';
 
-	// Background.
-	$wrapper._parallax(0.925);
+        if(current === 'index.html') {
+            if(href === 'index.html' || href === '') li.classList.add('active');
+            else li.classList.remove('active');
+        } else {
+            if(href && current.includes(href.replace(/#.*/,''))) li.classList.add('active');
+            else li.classList.remove('active');
+        }
+    });
 
-	// Intro section animation.
-	var $intro = $('#intro');
-	if ($intro.length > 0) {
-		if (browser.name == 'ie') {
-			$window.on('resize.ie-intro-fix', function() {
-				var h = $intro.height();
-				if (h > $window.height()) $intro.css('height', 'auto');
-				else $intro.css('height', h);
-			}).trigger('resize.ie-intro-fix');
-		}
-		breakpoints.on('>small', function() {
-			$main.unscrollex();
-			$main.scrollex({
-				mode: 'bottom', top: '25vh', bottom: '-50vh',
-				enter: function() { $intro.addClass('hidden'); },
-				leave: function() { $intro.removeClass('hidden'); }
-			});
-		});
-		breakpoints.on('<=small', function() {
-			$main.unscrollex();
-			$main.scrollex({
-				mode: 'middle', top: '15vh', bottom: '-15vh',
-				enter: function() { $intro.addClass('hidden'); },
-				leave: function() { $intro.removeClass('hidden'); }
-			});
-		});
-	}
+    // -----------------------------
+    // BACK TO TOP BUTTON
+    // -----------------------------
+    if(backBtn){
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 300) backBtn.classList.add('visible');
+            else backBtn.classList.remove('visible');
+        });
 
-})(jQuery);
+        backBtn.addEventListener('click', e => {
+            e.preventDefault();
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+    }
 
+    // -----------------------------
+    // DYNAMIC PAGE TITLE BASED ON SECTION
+    // -----------------------------
+    if(sections.length){
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting && entry.intersectionRatio >= 0.5){
+                    const h = entry.target.querySelector('h1, h2');
+                    if(h) document.title = `${h.textContent} | ${defaultTitle}`;
+                }
+            });
+        }, { threshold: 0.5 });
 
-// --- Custom Hamburger Menu Logic ---
-document.addEventListener('DOMContentLoaded', function() {
+        sections.forEach(section => observer.observe(section));
+    }
 
-	const hamburgerButton = document.getElementById('hamburger-menu');
-	const navBar = document.getElementById('nav');
-	const body = document.body;
+    // -----------------------------
+    // PARALLAX EFFECT FOR WRAPPER
+    // -----------------------------
+    if(wrapper){
+        const intensity = 0.925; // scale of parallax
+        const bg = document.createElement('div');
+        bg.className = 'bg';
+        wrapper.prepend(bg);
 
-	if (hamburgerButton && navBar && body) {
-		hamburgerButton.addEventListener('click', function() {
-			navBar.classList.toggle('nav-active');
-			body.classList.toggle('is-nav-active');
-		});
-	}
-});
+        const parallax = () => {
+            const rect = wrapper.getBoundingClientRect();
+            const offset = window.scrollY - wrapper.offsetTop;
+            bg.style.transform = `translateY(${offset * intensity}px)`;
+        };
 
-// --- Back to Top Button Logic ---
-const backToTopButton = document.querySelector('.back-to-top');
-if (backToTopButton) {
-	window.addEventListener('scroll', () => {
-		if (window.scrollY > 300) { // Show button after scrolling 300px
-			backToTopButton.classList.add('visible');
-		} else {
-			backToTopButton.classList.remove('visible');
-		}
-	});
-}
+        // Disable parallax for mobile / high DPI
+        const isDisabled = /Mobi|Android/i.test(navigator.userAgent) || window.devicePixelRatio > 1;
+        if(!isDisabled){
+            window.addEventListener('scroll', parallax);
+            window.addEventListener('resize', parallax);
+            window.addEventListener('load', parallax);
+        } else {
+            bg.classList.add('fixed');
+            bg.style.transform = 'none';
+        }
+    }
 
-// --- Dynamic Page Title Logic ---
-const sections = document.querySelectorAll('section[id]');
-const mainTitle = document.title;
+    // -----------------------------
+    // INTRO SECTION ANIMATION
+    // -----------------------------
+    if(intro){
+        const observerIntro = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    intro.classList.remove('hidden');
+                } else {
+                    intro.classList.add('hidden');
+                }
+            });
+        }, { rootMargin: '-25% 0px -50% 0px' });
 
-const observer = new IntersectionObserver(entries => {
-	entries.forEach(entry => {
-		if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-			const sectionTitle = entry.target.querySelector('h1, h2');
-			if (sectionTitle) {
-				document.title = `${sectionTitle.textContent} | ${mainTitle}`;
-			}
-		}
-	});
-}, { threshold: 0.5 });
+        observerIntro.observe(intro);
+    }
 
-sections.forEach(section => {
-	observer.observe(section);
-});
+    // -----------------------------
+    // SMOOTH SCROLLING FOR LINKS
+    // -----------------------------
+    document.querySelectorAll('.scrolly').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if(target){
+                target.scrollIntoView({behavior:'smooth'});
+            }
+        });
+    });
+
+}); // End DOMContentLoaded

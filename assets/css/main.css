@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900|Montserrat:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:700|Montserrat:400,500,700&display=swap");
 
 /* --- 1. SITE VARIABLES & CUSTOM STYLES --- */
 :root {
@@ -20,9 +20,10 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: url('../images_/usgs-001-unsplash.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
     filter: blur(4px) brightness(0.7);
     z-index: -1;
 }
@@ -31,6 +32,7 @@ body::before {
     max-width: 150px;
     border-radius: 50%;
 }
+
 
 /* --- 2. RESET & BASIC --- */
 html,
@@ -137,7 +139,8 @@ section {
 }
 
 body {
-    line-height: 1;
+    line-height: 1.75;
+    background-color: var(--color-bg);
     -webkit-text-size-adjust: none;
 }
 
@@ -191,18 +194,18 @@ body.is-preload *:after {
 
 /* --- 3. TYPOGRAPHY --- */
 html {
-    font-size: 16pt;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 1680px) {
     html {
-        font-size: 12pt;
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 1280px) {
     html {
-        font-size: 11pt;
+        font-size: 11px;
     }
 }
 
@@ -219,7 +222,7 @@ textarea {
 
 a {
     transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-    border-bottom: dotted 1px;
+    border-bottom: 1px solid transparent;
     text-decoration: none;
     color: inherit;
 }
@@ -287,7 +290,7 @@ h3 {
 
 #nav {
     display: flex;
-    background: rgba(255, 255, 255, 0.175);
+    background: rgba(30, 37, 45, 0.85);
     line-height: 4rem;
     margin: 1rem auto 0 auto;
     /* CORRECTED MARGIN */
@@ -337,36 +340,40 @@ h3 {
 }
 
 .hamburger-menu {
-    display: none;
+    display: flex;
 }
 
 /* --- 5. MOBILE NAVIGATION --- */
 @media screen and (max-width: 980px) {
     #header {
-        display: none;
+        display: block;
+        padding: 0.75rem 1rem;
     }
 
     .hamburger-menu {
-        background: rgba(30, 37, 45, 0.5);
-        border: 0;
-        border-radius: 4px;
-        cursor: pointer;
-        display: block;
-        height: 40px;
-        position: fixed;
-        right: 0.75rem;
-        top: 0.75rem;
-        width: 40px;
-        z-index: 1002;
+    display: none;
+    position: fixed;       
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 44px;
+    height: 44px;
+    background: rgba(30,37,45,0.85);
+    border-radius: 6px;
+    z-index: 2000;         
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 
     .hamburger-menu span {
-        background-color: #ffffff;
-        display: block;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        width: 25px;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
     }
 
     #nav {
@@ -383,14 +390,17 @@ h3 {
         padding: 0;
         position: fixed;
         top: 0;
-        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         visibility: hidden;
         width: 100vw;
+        z-index: 1500;
     }
 
     #nav.nav-active {
         opacity: 1;
         visibility: visible;
+        transform: translateX(0);
     }
 
     #nav ul.links,
@@ -407,7 +417,7 @@ h3 {
 
     #nav ul.links li a {
         font-size: 1.2rem;
-        padding: 1rem 0;
+        padding: 1.25rem 0;
     }
 
     #nav ul.icons {
@@ -428,7 +438,7 @@ h3 {
     }
 
     body.is-nav-active .hamburger-menu span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 }
 
@@ -706,6 +716,8 @@ input[type="submit"],
 input[type="submit"]:hover,
 .button:hover {
     background-color: var(--color-accent);
+    color: #0b1720 !important;               /* near-black text for contrast */
+    box-shadow: 0 6px 18px rgba(24,191,239,0.12);
 }
 
 /* --- 8. PROJECT PAGE & FOOTER FIXES --- */
@@ -713,7 +725,7 @@ input[type="submit"]:hover,
     color: #666;
     font-size: 0.9em;
     font-style: italic;
-    margin-top: 0.5em;
+    margin-top: 0.3rem;
     text-align: center;
 }
 
@@ -769,12 +781,6 @@ input[type="submit"]:hover,
     color: var(--color-headings);
 }
 
-#map {
-    width: 100%;
-    height: 400px;
-    border-radius: 10px;
-    z-index: 1;
-}
 
 #footer h3,
 #footer h2,
@@ -864,6 +870,7 @@ input[type="submit"]:hover,
     height: 400px;
     border-radius: 10px;
     margin-top: 1rem;
+    z-index: 1;
 }
 
 /* --- 11. ABOUT PAGE TIMELINE --- */
@@ -879,25 +886,27 @@ input[type="submit"]:hover,
     content: '';
     position: absolute;
     top: 0;
-    left: 18px;
+    left: 25px;
     height: 100%;
     width: 4px;
     background: var(--color-border);
 }
 
 .timeline-item {
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 2em;
     position: relative;
-    padding-left: 50px;
+    padding-left: 60px;
 }
 
 .timeline-icon {
     position: absolute;
     left: 0;
     top: 0;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     border-radius: 50%;
     background: var(--color-accent);
     color: white;
@@ -905,6 +914,9 @@ input[type="submit"]:hover,
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    z-index: 1;
 }
 
 .timeline-content h3 {
@@ -964,21 +976,4 @@ header.major {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-/* Captions */
-.caption {
-    font-size: 0.9rem;
-    font-style: italic;
-    margin-top: 0.3rem;
-    text-align: center;
-}
-
-/* Interim fix for low-res DEM */
-.low-res-fix {
-    image-rendering: crisp-edges;
-    filter: contrast(105%) brightness(105%);
-    max-width: 60%;
-    display: block;
-    margin: auto;
 }

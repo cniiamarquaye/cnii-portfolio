@@ -8,10 +8,10 @@
 ### 👋 Hi, I'm Nii Amarquaye Commey
 
 Geospatial scientist turning geospatial data into actionable sustainability insights.
-**Research Assistant Professor** | **Geospatial & Marine Scientist** | **Environmental Intelligence**  
+**Research Assistant Professor | Geospatial & Marine Scientist | Environmental Intelligence**  
 Transforming **geospatial data** into **sustainability solutions** 🌍
 
-[![Website](https://img.shields.io/badge/Portfolio-Visit%20Now-2ea44f?style=for-the-badge)](https://cniiamarquaye.github.io)   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/c-nii/)   [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/cniiamarquaye)
+[![Website](https://img.shields.io/badge/Portfolio-Visit%20Now-2ea44f?style=for-the-badge)](https://cniiamarquaye.github.io)        [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/c-nii/)        [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/cniiamarquaye)
 
 Welcome!  
 This portfolio showcases my work in **geospatial science**, **environmental sustainability**, and **hydrogeology**.  
@@ -60,7 +60,7 @@ _A visual hub for my projects, research, and interactive geospatial tools._
 
 > **Coming Soon** 🚀  
 > Interactive dashboards, Earth observation datasets and more research that explore disciplines in:  
-> 🌊 **Marine Sciences** | 🏙️ **Urban Dynamics** | 🌾 **Sustainable Agriculture** | 🌡️ **Climate Change Impacts** | 🛰️ **Earth Observation for Environmental Intelligence**
+> 🌊 **Marine Sciences | 🏙️ Urban Dynamics | 🌾 Sustainable Agriculture | 🌡️ Climate Change Impacts | 🛰️ Earth Observation for Environmental Intelligence**
 
 ---
 
@@ -85,8 +85,8 @@ open index.html
 
 ### Image Credits
 > *(Update this list as needed)*
-- “Groundwater Flow Model” by Jane Doe – [Source](https://example.com) – Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- “Aquifer Visualization” by John Smith – [Source](https://example.com) – Public Domain
+- “Groundwater Flow Model” Ernest Commey – [Source](https://example.com) – Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- “Aquifer Visualization” by Franklin Commey – [Source](https://example.com) – Public Domain
 
 ---
 
@@ -109,3 +109,9 @@ Open to collaborations/research partnerships, project partners, feedback, and co
 
 Thank you.
 ```
+
+---
+> **LIVE | LEARN | MOVE**
+> _— N. A. Commey_
+> _Built with ❤️ using skills honed through relentless curiosity, and a love for community-driven tech._
+---

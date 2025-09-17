@@ -22,9 +22,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images_/usgs-001-unsplash.jpg') center center / cover no-repeat;
+    background: url('../images_/background/usgs-000-unsplash.jpg') center center / cover no-repeat;
     background-attachment: fixed;
-    filter: blur(4px) brightness(0.7);
+    filter: blur(2px) brightness(0.7);
     z-index: -1;
 }
 
@@ -316,8 +316,8 @@ h3 {
     border: 0;
     color: #ffffff;
     display: block;
-    font-size: 0.8rem;
-    padding: 0 1.5rem;
+    font-size: 1.3rem 0;
+    padding: 1.5rem 0;
     text-transform: uppercase;
 }
 
@@ -345,92 +345,138 @@ h3 {
 
 /* --- 5. MOBILE NAVIGATION --- */
 @media screen and (max-width: 980px) {
+     /* Header adjustments */
     #header {
         display: block;
         padding: 0.75rem 1rem;
+        position: relative;
+        z-index: 1900;
     }
 
+    /* Hamburger menu button - FIXED positioning */
     .hamburger-menu {
-    display: none;
-    position: fixed;       
-    top: 0.75rem;
-    right: 0.75rem;
-    width: 44px;
-    height: 44px;
-    background: rgba(30,37,45,0.85);
-    border-radius: 6px;
-    z-index: 2000;         
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        display: flex !important;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+        background: rgba(30, 37, 45, 0.95);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        z-index: 2000;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-menu:hover {
+        background: rgba(30, 37, 45, 1);
+        border-color: var(--color-accent);
     }
 
     .hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+        width: 24px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 3px 0;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        display: block;
     }
 
+    /* Navigation panel - fullscreen overlay */
     #nav {
-        align-items: center;
-        background: rgba(30, 37, 45, 0.95);
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        justify-content: center;
-        left: 0;
-        margin: 0;
-        max-width: none;
-        opacity: 0;
-        padding: 0;
         position: fixed;
         top: 0;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        visibility: hidden;
+        left: 0;
         width: 100vw;
+        height: 100vh;
+        background: rgba(30, 37, 45, 0.98);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
         z-index: 1500;
+        margin: 0;
+        max-width: none;
     }
 
+    /* Active navigation state */
     #nav.nav-active {
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
     }
 
-    #nav ul.links,
-    #nav ul.icons {
+    /* Navigation lists */
+    #nav ul.links {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-bottom: 2rem;
     }
 
     #nav ul.links li {
+        width: 80%;
         text-align: center;
-        width: 100%;
+        margin: 0.5rem 0;
     }
 
     #nav ul.links li a {
-        font-size: 1.2rem;
-        padding: 1.25rem 0;
+        display: block;
+        font-size: 1.3rem;
+        padding: 1rem;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
     }
 
+    #nav ul.links li a:hover,
+    #nav ul.links li.active a {
+        color: var(--color-accent) !important;
+        border-bottom-color: var(--color-accent);
+    }
+
+     /* Active menu item styling */
+    #nav ul.links li.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+
+    /* Social icons */
     #nav ul.icons {
         flex-direction: row;
-        margin-top: 2rem;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
     }
 
     #nav ul.icons li {
         padding: 0 1rem;
     }
 
+    #nav ul.icons a {
+        color: #ffffff;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    #nav ul.icons a:hover {
+        color: var(--color-accent) !important;
+    }
+
+    /* Hamburger animation when active */
     body.is-nav-active .hamburger-menu span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
     }
 
     body.is-nav-active .hamburger-menu span:nth-child(2) {
@@ -440,6 +486,32 @@ h3 {
     body.is-nav-active .hamburger-menu span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
     }
+
+    /* Dark overlay when menu is open */
+    body.is-nav-active::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1400;
+        animation: fadeIn 0.3s ease;
+    }
+}
+
+/* Ensure hamburger is hidden on desktop */
+@media screen and (min-width: 981px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+}
+
+/* Animation for fade in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* --- 6. LAYOUT & CONTENT --- */
@@ -977,3 +1049,148 @@ header.major {
     height: auto;
     border-radius: 10px;
 }
+
+/* Table styling */
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            min-width: 600px;
+        }
+
+        .data-table th {
+            background-color: var(--color-accent);
+            color: white;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-align: center;
+            padding: 15px 10px;
+            border: 1px solid #d1d1d1;
+        }
+
+        .data-table td {
+            padding: 12px 10px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            vertical-align: top; /* Default alignment */
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* This is the key fix - center variable names vertically */
+        .variable-name {
+            background-color: #e6f7ff;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-align: center;
+            vertical-align: middle !important; /* Force vertical centering */
+            padding: 15px 5px; /* Adjust padding for better centering */
+            writing-mode: horizontal-tb; /* Ensure horizontal text */
+        }
+
+        .stat-name {
+            text-align: left;
+            padding-left: 20px;
+            font-style: italic;
+        }
+
+        .significant {
+            color: #e63946;
+            font-weight: 700;
+        }
+
+        .table-caption {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-bottom: 15px;
+            text-align: center;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-top: 15px;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        /* Mobile-specific optimizations */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .data-table {
+                font-size: 14px;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 10px 8px;
+            }
+            
+            .variable-name {
+                padding: 12px 5px;
+                writing-mode: horizontal-tb;
+            }
+            
+            .stat-name {
+                padding-left: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .data-table {
+                font-size: 13px;
+                min-width: 500px;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 8px 6px;
+            }
+            
+            .table-caption {
+                font-size: 0.9rem;
+            }
+            
+            .variable-name {
+                font-size: 12px;
+                padding: 10px 4px;
+            }
+        }
+
+        .key-findings {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .key-findings h3 {
+            margin-top: 0;
+            color: var(--color-headings);
+            font-family: var(--font-heading);
+        }
+        
+        .key-findings p {
+            margin-bottom: 0;
+        }

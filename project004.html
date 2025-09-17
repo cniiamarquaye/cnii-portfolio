@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	Massively by HTML5 UP (Restructured by CNII)
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Coastal Wetland Monitoring for Sustainable Development</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="assets/css/main.css">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css">
+	</noscript>
+	<style>
+		/* Custom map container styling */
+		#map {
+			width: 100%;
+			height: 400px;
+			border-radius: 10px;
+			margin-top: 1rem;
+		}
+	</style>
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9WX8V2Q18"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-R9WX8V2Q18');
+	</script>
+</head>
+
+<body class="is-preload">
+	<div id="wrapper" class="fade-in">
+		<a href="#wrapper" class="back-to-top button icon solid solo fa-arrow-up scrolly">Top</a>
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Nii Amarquaye Commey</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="profile.html">About Nii</a></li>
+				<li class="active"><a href="index.html#projects">Projects</a></li>
+				<li><a href="#footer">Contact</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands fa-linkedin" target="_blank"><span
+							class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/cniiamarquaye" class="icon brands fa-github" target="_blank"><span
+							class="label">GitHub</span></a></li>
+				<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+						<span class="label">Google Scholar</span></a></li>
+			</ul>
+			<button class="hamburger-menu" id="hamburger-menu" aria-label="Open navigation menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<section class="post">
+				<header class="major">
+					<h1>🌍 Coastal Wetland Monitoring for Sustainable Development</h1>
+					<p>LULC Change Analysis • Remote Sensing</p>
+				</header>    
+		
+		<h2>🔍 Project Snapshot</h2>
+            <p>
+                From 1970 to 2015 alone, there has been a 35% global loss of coastal wetlands due to 
+                unprecedented threats from industrialisation, urbanisation, and climate change. 
+                This project demonstrates the application of advanced geospatial technologies to 
+                address critical environmental challenges facing coastal wetlands in Ghana. 
+                Using two designated Ramsar sites (Sakumo and Songor wetlands) as case studies, 
+                this project employed multi-temporal remote sensing data from 1990 to 2020 to 
+                quantify land use and land cover (LULC) changes in these ecologically significant 
+                areas—international ecosystems recognized for their biodiversity importance.
+            </p>
+            <img src="assets/images_/qnspect/catchm000_Map of aois.png" 
+                 alt="Map of the AOIs."
+                 loading="lazy"
+                 style="width:100%;border-radius:10px;">
+                    <p class="caption">
+                      <strong>Map showing the areas of interest (Sakumo & Songor catchments).</strong>
+                    </p>
+
+
+        <hr />
+
+			<!-- Key Objectives -->
+			<h2>📌 Key Objectives</h2>
+            <p>
+                This project aimed to provide an evidence-based synthesis that potentially diagnoses 
+                the causes, pace, and mechanics the Sakumo and Songor catchments undergo with the aid 
+                of geospatial science. This provides a clearer and comprehensive approach to arrive at 
+                informed conservation policies and sustainable land management planning.
+
+                In achieving this, the following objectives served as milestones;
+                <li> Quantify LULC changes in the Sakumo and Songor catchments from 1990 to 2020,</li>
+                <li> Determine the dynamics of LULC change with intensity analysis, and</li>
+                <li> Evaluate the primary drivers influencing the observed LULC changes by integrating natural and anthropogenic data.</li>
+            </p>
+			<hr />
+
+			<!-- Methodology & Technical Approach-->
+			<h2>🛠 Methodology & Technical Approach</h2>
+                <h3>Research Workflow</h3>
+                <p>
+                    This flowchart outlines the multi-stage process from data acquisition to final change detection, 
+                    ensuring the results are derived from pre-processed, accurately classified satellite imagery.
+                </p>
+                <img src="assets/images_/qnspect/catchm001_workflow.png" 
+                     alt="Research Workflow Diagram"
+                     loading="lazy"
+                     style="width:100%;border-radius:10px;">
+                    <p class="caption"><strong>Methodological workflow for Land Use/Land Cover (LULC) change analysis.</strong></p>
+                <h3>Data Acquisition & Pre-processing</h3>
+                <p>
+                    For a robust temporal analysis of environmental changes spanning from 1990 to 2020, 
+                    this research used the <strong>Landsat Collection 2 Level 1 satellite imagery</strong>
+                    (Landsat-4 TM, Landsat-7 ETM, Landsat-8 OLI/TIRS) obtained from the USGS Earth Explorer platform.
+                    The 30-year study period allowed for comprehensive tracking of landscape transformations 
+                    in both wetland catchments. 
+                    All images underwent rigorous atmospheric correction using the 
+                    Dark Object Subtraction (DOS) method and were processed to calculate various spectral 
+                    indices to accurately isolate wetland features. 
+                    These indices included the Normalized Difference Vegetation Index (NDVI) and
+                    Modified Normalized Difference Water Index (MNDWI).
+                </p>
+                <p>
+                    Additionally, ancillary data such as <strong>topographical data</strong> (Digital Elevation Model (DEM) from the Shuttle 
+                    Radar Topography Mission (SRTM)) and <strong>climatic data (rainfall, temperature, etc.)</strong> from remote sources 
+                    (CHIRPS and TerraClimate) were compared to available ground data from the Ghana Meteorological Agency were integrated 
+                    to provide context for hydrological modelling. 
+                    Population data from national censuses and remote datasets were also incorporated to assess anthropogenic pressures.
+                </p>
+
+                <h3>Analytical Framework</h3>
+                <p>
+                    The analytical approach incorporated supervised classification techniques with post-classification 
+                    comparison to quantify changes across different time intervals (~10 years). Four classification
+                    algorithms were evaluated: Maximum Likelihood, Random Trees, Support Vector Machine 
+                    and K-nearest neighbour. The Maximum Likelihood algorithm was selected for its superior accuracy 
+                    in distinguishing complex wetland habitats.
+                </p>
+
+        <span class="caption">
+                <strong>Accuracy metrics of LULC classifiers for 
+                    Sakumo and Songor catchments.</strong>        
+        </span>
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">LULC Classifiers</th>
+                        <th colspan="2" class="catchment-header">Sakumo</th>
+                        <th colspan="2" class="catchment-header">Songor</th>
+                    </tr>
+                    <tr>
+                        <th>Overall Accuracy</th>
+                        <th>Kappa</th>
+                        <th>Overall Accuracy</th>
+                        <th>Kappa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="classifier-name"><strong>K-nearest neighbour</strong></td>
+                        <td>66%</td>
+                        <td>0.55</td>
+                        <td>65%</td>
+                        <td>0.56</td>
+                    </tr>
+                    <tr>
+                        <td class="classifier-name"><strong>Random Trees</strong></td>
+                        <td>60%</td>
+                        <td>0.45</td>
+                        <td>62%</td>
+                        <td>0.52</td>
+                    </tr>
+                    <tr>
+                        <td class="classifier-name"><strong>Maximum Likelihood</strong></td>
+                        <td class="significant"><strong>72%</strong></td>
+                        <td class="significant"><strong>0.63</strong></td>
+                        <td class="significant"><strong>77%</strong></td>
+                        <td class="significant"><strong>0.70</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="classifier-name"><strong>Support Vector Machine</strong></td>
+                        <td>67%</td>
+                        <td>0.55</td>
+                        <td>59%</td>
+                        <td>0.48</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+                <p>    
+                    The research employed <strong>intensity analysis</strong>—a hierarchical framework that
+                    reveals not just what changed, but how fast and how systematically those changes occurred.
+                    This sophisticated approach allowed for detailed identification of systematic transitions between 
+                    land categories and provided insights into the dynamics of change processes.
+                    
+                    The findings were validated through ground-truthing exercises and historical map comparisons, 
+                    achieving classification accuracy of <strong>72% for Sakumo</strong> and <strong>77% for Songor</strong>. 
+                </p>
+                    <img src="assets/images_/qnspect/catchm002_Intensity Analysis Framework.png" 
+                         alt="Intenstiy Analysis Framework"
+                         loading="lazy"
+                         style="width:100%;border-radius:10px;">
+                        <p class="caption"><strong>Three-level hierarchical framework for Intensity Analysis.</strong>
+                            This summarises the analytical method used to move beyond simple net change 
+                            statistics and identify precisely where, how fast, and which specific transitions 
+                            of LULC change were systematic versus random.
+                        </p>
+            <hr />
+
+            <!-- Key Findings & Insights -->
+			<h2>💡 Key Insights</h2>
+                <h3>LULC Change Dynamics</h3>
+			<p>
+                <li>The analysis revealed dramatic transformations in both Ramsar sites over the 30-year study period. 
+                The Sakumo wetland catchment experienced a significant expansion of built-up areas 
+                primarily at the expense of mangrove forests and water bodies. 
+                Meanwhile, agricultural land increased, reflecting growing food production demands in the region. 
+                The Songor wetland catchment showed slightly different but equally concerning patterns, 
+                with 'urban' expansion driven largely by salt mining operations and agricultural development. 
+                These anthropogenic and natural factors drove the rate and spate of LULC changes. 
+                However, their extents and influence have not been significantly quantified.</li>
+            </p>
+            <div class="figures-grid">
+                <div class="figure-item">
+                    <img src="assets/images_/qnspect/LULC SK 1990-2020.gif" 
+                        loading="lazy"
+                        alt="Sakumo LULC Changes"
+                        style="width:80%;border-radius:10px;">
+                </div>
+                <div class="figure-item">
+                    <img src="assets/images_/qnspect/LULC SG 1990-2020.gif" 
+                        loading = "lazy"
+                        alt="Songor LULC Changes"
+                        style="width:100%;border-radius:10px;">
+                </div>
+            </div>
+            <p class="caption">
+                        <strong>Spatial-temporal evolution of LULC (1990-2020) in the Sakumo and Songor catchments showing intense 
+                        anthropogenic pressure on these ecosystems.</strong><br /> 
+                        As Sakumo recorded the expansion of Development areas (red), Songor displayed the concurrent 
+                        fragmentation and loss of Wetland and Vegetation classes (green/blue).
+                    </p>
+            <div class="image">
+                <img src="assets/images_/qnspect/catchm004_LULC change statistics.png" 
+                     loading="lazy"
+                     alt="Quantitative analysis of LULC (%) in the Sakumo and SOngor catchments (1990-2020)."
+                     style="width:100%;border-radius:10px;">
+                    <p class="caption">
+                        <strong>Quantitative analysis of LULC (%) in the Sakumo and Songor catchments (1990-2020).</strong>
+                        The bar charts quantify the dramatic decline in wetland cover (such as a loss of over 60% in Sakumo by 2020) 
+                        and the rapid rise of urban (in Sakumo) and agricultural land (in Songor). This confirms the trends observed in 
+                        the change maps and highlight a critical need for conservation frameworks.
+                    </p>
+			</div>
+            <p>    
+                <li>The intensity analysis demonstrated that changes in the Sakumo wetland catchment were predominantly 
+                concentrated in human-induced LULC categories, while the Songor wetland catchment changes were more 
+                influenced by natural processes, the anthropogenic factors still played a substantial role. 
+                The research attributed these changes primarily to population dynamics and economic pressures, 
+                with climate change acting as an additional stressor on these vulnerable ecosystems.
+                The population growth curve correlates strongly with LULC shifts, highlighting the human
+                pressures on the natural resources.</li>
+            
+                <li>To that effect, key drivers influencing the LULC changes in the catchments were assessed. 
+                These drivers were <strong>population growth</strong> and <strong>hydro-climatic factors</strong> 
+                (including temperature, precipitation, evapotranspiration and potential water availability).</li>
+                
+                <li>Local population data (from the Ghana Statistical Service for 2010 and 2021) and remote datasets 
+                (from 2000 - 2020 (for Landscan and WorldPop) and from 1990 - 2020 (for GlobPOP)) were compared. 
+                Though Sakumo registered a higher population density, Songor showed faster growth rate. 
+                This is possibly due to inhabitants migration for <strong>greener pastures</strong> in urban areas.</li>
+            </p>        
+				<div class="image">
+                    <img src="assets/images_/qnspect/catchm005_Population density distribution from 1990 - 2021.png"
+                         alt="Population density trends (1990 - 2021)." 
+                         loading="lazy"
+                         style="width:100%;border-radius:10px;">
+                        <p class="caption">
+                        <strong>Population density trends (1990-2021) derived from multiple datasets.</strong>
+                        The graphs demonstrate a strong, consistent upward trend in population density for both catchments,
+                        providing the crucial socio-demographic context that directly explains the observed LULC changes,
+                        particularly the expansion of human-led areas.
+                    </p>
+                </div>
+            <div class="figures-grid">
+				<div class="figure-item">
+					<img src="assets/images_/qnspect/SK_GlobPOP_1990-2020.gif" 
+                         alt="Sakumo catchment population density distribution maps for 1990, 2000, 2011 and 2020." 
+                         loading="lazy"
+                         style="width:80%;border-radius:10px;">
+					<p class="caption">
+                        <strong>Sakumo catchment population density distribution maps (1990-2020).</strong>
+                    </p>
+				</div>
+				<div class="figure-item">
+					<img src="assets/images_/qnspect/SG_GlobPOP_1990-2020.gif" 
+                         alt="Songor catchment population density distribution maps for 1990, 2000, 2011 and 2020." 
+                         loading="lazy"
+                         style="width:100%;border-radius:10px;">
+					<p class="caption">
+                        <strong>Songor catchment population density distribution maps (1990-2020).</strong>
+                    </p>
+				</div>
+			</div>
+				
+                <h3>🌧️🌡️ Hydro-Climatic Parameters Analysis</h3>
+                <p>
+                    <li>Trend analysis to test for statistically significant patterns within hydro-climatic data was undertaken using the 
+                    Mann-Kendall Trend and Sen’s Slope Test. Only temperature showed a significant trend, with a potential annual 
+                    <strong>increase of 0.03 deg. Celsius</strong>. Rainfall, evapotranspiration, and potential water availability 
+                    did not show significant trends.</li>
+                </p>
+                
+                <div style="max-width: 800px; margin: 0 auto; padding: 1rem;">
+                    <div class="table-container">
+                        <span class="table-caption">
+                            <strong>Statistical significance and estimated annual change of hydro-climatic 
+                            parameters in the Sakumo and Songor catchments.</strong> 
+                        </span>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Stat</th>
+                                    <th>Sakumo</th>
+                                    <th>Songor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2" class="variable-name" data-label="Variable">Precipitation</td>
+                                    <td class="stat-name" data-label="Stat">p-value</td>
+                                    <td data-label="Sakumo">0.81</td>
+                                    <td data-label="Songor">0.48</td>
+                                </tr>
+                                <tr> <!-- No variable cell here because it's spanned --> 
+                                    <td class="stat-name">Samp. Estimate (Q)</td> 
+                                    <td data-label="Sakumo">1.15</td> 
+                                    <td data-label="Songor">2.53</td> 
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="variable-name" data-label="Variable">Av. Temperature</td>
+                                    <td class="stat-name" data-label="Stat">p-value</td>
+                                    <td class="significant" data-label="Sakumo"><strong>2.50E-05</strong></td>
+                                    <td class="significant" data-label="Songor"><strong>4.52E-05</strong></td>
+                                </tr>
+                                <tr>
+                                    <!-- No variable cell here because it's spanned -->
+                                    <td class="stat-name" data-label="Stat">Samp. Estimate (Q)</td>
+                                    <td class="significant" data-label="Sakumo"><strong>0.03</strong></td>
+                                    <td class="significant" data-label="Songor"><strong>0.03</strong></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="variable-name" data-label="Variable">Act. Evapotranspiration</td>
+                                    <td class="stat-name" data-label="Stat">p-value</td>
+                                    <td data-label="Sakumo">0.45</td>
+                                    <td data-label="Songor">0.36</td>
+                                </tr>
+                                <tr>
+                                    <!-- No variable cell here because it's spanned -->
+                                    <td class="stat-name" data-label="Stat">Samp. Estimate (Q)</td>
+                                    <td data-label="Sakumo">2.5</td>
+                                    <td data-label="Songor">2.53</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="variable-name" data-label="Variable">Potential Water Availability</td>
+                                    <td class="stat-name" data-label="Stat">p-value</td>
+                                    <td data-label="Sakumo">0.40</td>
+                                    <td data-label="Songor">0.71</td>
+                                </tr>
+                                <tr>
+                                    <!-- No variable cell here because it's spanned -->
+                                    <td class="stat-name" data-label="Stat">Samp. Estimate (Q)</td>
+                                    <td data-label="Sakumo">-0.83</td>
+                                    <td data-label="Songor">0.61</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="footnote">
+                            * p-value > 0.05: No significant trend; 
+                              p-value < 0.05: Significant trend.
+                        </div>
+                    </div>
+                </div>
+            <hr />
+
+            <h2>🌿 Biodiversity and Ecosystem Services Impacts</h2>
+                <p>
+                    The conversion of natural habitats has led to substantial declines in ecosystem services provided by 
+                    these wetlands. The loss of mangrove forests has reduced natural buffering capacity against coastal 
+                    erosion and storm surges, while the degradation of water bodies has diminished their water purification 
+                    functions and fisheries support capacity. The research documented correlative evidence between LULC changes 
+                    and declining populations of migratory birds and other wildlife that depend on these habitats, highlighting 
+                    the conservation implications of these transformations.
+                </p>
+                
+                <h3>🌴🏢 Sustainability Implications: Contributions to Sustainable Development Goals</h3>
+                    <p>
+                        This research provides critical insights for achieving multiple Sustainable Development Goals. 
+                        For <strong>SDG 6 (Clean Water and Sanitation)</strong>, the findings inform strategies for protecting 
+                        water-related ecosystems. 
+                        For <strong>SDG 13 (Climate Action)</strong>, the study highlights the role of wetlands in climate 
+                        change mitigation through carbon sequestration and climate adaptation through buffering extreme weather events. 
+                        For <strong>SDGs 14</strong> and <strong>15 (Life Below Water and Life on Land)</strong>, the research offers
+                        empirical evidence of human impacts on coastal and terrestrial ecosystems, supporting targeted conservation 
+                        interventions.
+                        The <strong>catchment-based approach</strong> aligns directly with <strong>SDG 11 (Sustainable Cities and 
+                        Communities)</strong> by demonstrating the connections between urban development patterns and ecosystem health. 
+                        The research also contributes to <strong>SDGs 1</strong> and <strong>2 (No Poverty and Zero Hunger)</strong> 
+                        by documenting how environmental changes affect community livelihoods that depend on wetland resources, 
+                        highlighting the need for balanced approaches that support both conservation and sustainable use.
+                    </p>
+                
+                <h3>⚖️ Policy Recommendations</h3>
+                    <p>
+                        Based on the findings, the study recommended <strong>integrated management strategies</strong> that 
+                        address the root causes of wetland degradation while promoting sustainable development. 
+                        Specific policy interventions include:
+                        <li><strong>Zoning regulations</strong> that limit urban expansion into ecologically sensitive areas.</li>
+                        <li><strong>Incentive programs</strong> for sustainable agricultural practices that reduce wetland pollution.</li>
+                        <li><strong>Community-based conservation</strong> initiatives that engage local stakeholders in wetland management.</li>
+                        <li><strong>Climate adaptation plans</strong> that incorporate wetland protection as a key strategy.</li>
+                        <li><strong>Strengthened governance</strong> frameworks that coordinate across different sectors and jurisdictions.</li>
+                    </p>
+                
+                <h3>🔧 Future Directions: Enhancing the Analysis</h3>
+                    <div class="subsection">
+                        <div class="subsection-title"><strong>1. Methodological improvements</strong></div>
+                            <ul class="bullet-list">
+                                <li>Integrating higher-resolution satellite data (e.g., Sentinel-2, Planet Labs) 
+                                    and Synthetic Aperture Radar (SAR) to improve classification accuracy for complex wetland habitats</li>
+                                <li>Overcoming persistent cloud cover issues in tropical regions with advanced remote sensing techniques</li>
+                            </ul>
+                                
+                    <div class="subsection">
+                        <div class="subsection-title"><strong>2. Expanded analytical scope</strong></div>
+                            <ul class="bullet-list">
+                                <li>Developing predictive models using machine learning to simulate future LULC scenarios 
+                                    under different climate and policy conditions</li>
+                                <li>Creating an integrated monitoring framework that combines remote sensing with in-situ sensor data 
+                                    for water quality and biodiversity</li>
+                            </ul>
+                        </div>
+                    </div>
+                <hr />
+
+                <h3>🌱 Why It Matters: Relevance to Stakeholders</h3>
+                    <div class="subsection">
+                        <div class="subsection-title"><strong>1. For Policymakers & Conservationists:</strong></div>
+                            <ul class="bullet-list">
+                                <li>Provides empirical, spatially-explicit evidence to inform and evaluate national conservation strategies 
+                                    (e.g., Ghana's National Wetland Conservation Strategy) and international commitments (Ramsar Convention, UN SDGs).</li>
+                                <li>Enables targeted interventions and protected area management through precise data-driven insights.</li>
+                            </ul>
+                            <div class="subsection-title"><strong>2. For Researchers:</strong></div>
+                            <ul class="bullet-list">
+                                <li>Demonstrates a replicable, advanced methodology for environmental monitoring that can be applied 
+                                    globally, and showcases practical applications of geospatial technology for solving real-world 
+                                    sustainability challenges in the developing world.</li>
+                            </ul>
+                    </div>
+                <hr />   
+
+                <h3>🫱🏾‍🫲🏾 Collaboration Opportunities</h3>
+                    <p>
+                        This research demonstrates <strong>technical expertise</strong> and <strong>analytical capabilities</strong> 
+                        that can be applied to a range of environmental challenges. I am particularly interested in opportunities to:
+                        <li>Develop <strong>AI-driven monitoring systems</strong> for data scarce coastal ecosystems that 
+                            combine satellite imagery with in-situ sensors</li>
+                        <li>Design <strong>early warning systems</strong> for environmental degradation that support 
+                            proactive management</li>
+                        <li>Create <strong>decision support tools</strong> that integrate environmental data with 
+                            socio-economic indicators</li>
+                        <li>Apply similar approaches to other <strong>vulnerable ecosystems</strong> facing similar pressures</li>
+                    </p>
+            <hr />
+
+            <h2>🔮 Next Steps</h2>
+                <p>
+                   <li>Predicting potential future LULC rates and states of the catchments.</li>
+                   <li>Scaling the workflow to other data-scarce sites.</li>
+                </p>
+            <hr />
+            
+            <p>
+               For a detailed analysis and full manuscript, see
+                   <a href="assets/docs/Catchment-scale LULC change analysis in 2 Coastal Ramsar Sites in Ghana, using Remote Sensing.pdf">
+                        <strong>Catchment-Scale Land Use and Land Cover Change Analysis in Two Coastal Ramsar Sites in Ghana, Using Remote Sensing
+                        </strong>
+                   </a>.
+            </p>
+        <hr />
+
+		<!-- Back Button -->
+		<a href="index.html" class="button">Back to Portfolio</a>
+		</section>
+		</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<h2>Reach Out</h2>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="alt">
+				<section>
+					<h3>Connect with me</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin" target="_blank"
+								rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/cniiamarquaye" class="icon brands alt fa-github" target="_blank"
+								rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
+								<span class="label">Google Scholar</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+				
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Nii Amarquaye Commey</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</div>
+		
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+				
+</html>

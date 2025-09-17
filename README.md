@@ -21,7 +21,7 @@ I integrate **GIS**, **Earth observation**, **machine learning**, and **process-
 
 ## 📸 Portfolio Preview
 
-![Portfolio Screenshot](assets/images_/portfolio_snapshot000.png)  
+![Portfolio Screenshot](assets/images_/etc/portfolio_snapshot000.png)  
 _A visual hub for my projects, research, and interactive geospatial tools._
 
 ---

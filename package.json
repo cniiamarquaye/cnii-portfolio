@@ -1,0 +1,20 @@
+{
+  "name": "cnii_portfolio_v3.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "dev": "concurrently \"npm run build:css\" \"bundle exec jekyll serve\"",
+  "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.4"
+  }
+}

@@ -1,0 +1,117 @@
+<footer class="mt-24 border-t border-gray-200 dark:border-slate-800">
+  <div
+    class="relative bg-footer bg-cover bg-center max-w-7xl mx-auto px-6 py-14"
+  >
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-white/80 dark:bg-slate-950/70"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 grid md:grid-cols-3 gap-12">
+      <!-- Identity -->
+      <div>
+        <h3
+          class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ site.title }}
+        </h3>
+
+        <p
+          class="mt-4 text-sm text-gray-700 dark:text-slate-300 leading-relaxed"
+        >
+          Geospatial scientist focused on remote sensing, spatial analysis, and
+          geospatial intelligence. I turn complex environmental data into
+          insights that support real decisions.
+        </p>
+
+        <p class="mt-3 text-xs text-gray-500 dark:text-slate-500">
+          Currently exploring GeoAI, environmental monitoring, and scalable
+          geospatial workflows.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h4
+          class="text-sm font-medium tracking-wide uppercase text-gray-500 dark:text-slate-500"
+        >
+          Explore
+        </h4>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li>
+            <a href="{{ '/projects/' | relative_url }}" class="footer-link"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="{{ '/research/' | relative_url }}" class="footer-link"
+              >Research</a
+            >
+          </li>
+          <li>
+            <a href="{{ '/blog/' | relative_url }}" class="footer-link"
+              >Insights</a
+            >
+          </li>
+          <li>
+            <a href="{{ '/pages/about/' | relative_url }}" class="footer-link"
+              >About</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <h4
+          class="text-sm font-semibold tracking-wide uppercase text-gray-500 dark:text-slate-500"
+        >
+          Connect
+        </h4>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/c-nii/"
+              target="_blank"
+              class="footer-link"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/cniiamarquaye"
+              target="_blank"
+              class="footer-link"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://scholar.google.com/citations?user=v0wZQSsAAAAJ&hl=en"
+              target="_blank"
+              class="footer-link"
+              >Google Scholar</a
+            >
+          </li>
+          <li>
+            <a href="mailto:cniiamarquaye@yahoo.com" class="footer-link"
+              >Email</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div
+      class="relative z-10 mt-14 pt-8 border-t border-gray-300 dark:border-slate-700 text-sm text-gray-700 dark:text-slate-300 flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+    >
+      <p class="opacity-80">
+        &copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.
+      </p>
+      <p class="opacity-60">
+        Built with Jekyll, Tailwind CSS, and a focus on clean geospatial
+        storytelling.
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,136 @@
+<header class="sticky top-0 z-50 border-b border-gray-200 dark:border-slate-800">
+  <!-- Background image container with overlay -->
+  <div class="relative bg-header bg-center">
+    
+    <!-- Overlay (adjust opacity/color as needed) -->
+    <div class="absolute inset-0 z-0 bg-white/70 dark:bg-slate-900/80 pointer-events-none"></div>
+
+    <!-- Content with relative positioning -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-18 py-3">
+      <!-- Brand -->
+      <div class="flex flex-col leading-tight">
+        <a
+          href="{{ '/' | relative_url }}"
+          class="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 hover:text-slate-700 dark:hover:text-white transition"
+        >
+          {{ site.title }}
+        </a>
+        <span class="text-xs text-gray-500 tracking-wide uppercase">
+          Geospatial Intelligence & Environmental Systems
+        </span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav
+        class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide"
+      >
+        <button
+          id="theme-toggle"
+          class="ml-6 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+        >
+          🌙
+        </button>
+        <a
+          href="{{ '/' | relative_url }}"
+          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+        >
+          Home
+        </a>
+
+        <a
+          href="{{ '/projects/' | relative_url }}"
+          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+        >
+          Projects
+        </a>
+
+        <a
+          href="{{ '/research/' | relative_url }}"
+          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+        >
+          Research
+        </a>
+
+        <a
+          href="{{ '/blog/' | relative_url }}"
+          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+        >
+          Insights
+        </a>
+
+        <a
+          href="{{ '/pages/about/' | relative_url }}"
+          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+        >
+          About
+        </a>
+
+        <a
+          href="{{ '/pages/contact/' | relative_url }}"
+          class="px-4 py-2 rounded-md bg-slate-900 text-white dark:bg-slate-200 dark:text-slate-900 hover:bg-slate-700 dark:hover:bg-white transition"
+        >
+          Contact
+        </a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white dark:bg-slate-600 border-t border-gray-200 dark:border-slate-800"
+  >
+    <div class="px-6 py-6 space-y-4 text-sm font-medium">
+      <a
+        href="{{ '/' | relative_url }}"
+        class="block text-white-700 hover:text-slate-400"
+        >Home</a
+      >
+      <a
+        href="{{ '/projects/' | relative_url }}"
+        class="block text-white-700 hover:text-slate-400"
+        >Projects</a
+      >
+      <a
+        href="{{ '/research/' | relative_url }}"
+        class="block text-white-700 hover:text-slate-400"
+        >Research</a
+      >
+      <a
+        href="{{ '/blog/' | relative_url }}"
+        class="block text-white-700 hover:text-slate-400"
+        >Insights</a
+      >
+      <a
+        href="{{ '/pages/about/' | relative_url }}"
+        class="block text-white-700 hover:text-slate-400"
+        >About</a
+      >
+
+      <a
+        href="{{ '/pages/contact/' | relative_url }}"
+        class="block text-center mt-4 px-4 py-2 rounded-md bg-slate-900 text-white dark:bg-slate-200 dark:text-slate-900"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,296 +1,156 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP (Restructured by CNII)
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfolio by CNII</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-		
-		<!-- Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9WX8V2Q18"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'G-R9WX8V2Q18');
-		</script>
-	</head>
-	<body class="is-preload">
+---
+layout: default
+title: Home
+---
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-				<a href="#wrapper" class="back-to-top button icon solid solo fa-arrow-up scrolly">Top</a>
+<!-- PERSONAL HERO SECTION -->
+<section
+  class="bg-white dark:bg-slate-950 py-16 md:py-24 border-b border-gray-200 dark:border-slate-800"
+>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left: Intro Text -->
+      <div>
+        <p
+          class="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400"
+        >
+          Geospatial Intelligence · Water Systems
+        </p>
+        <h1
+          class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 leading-tight"
+        >
+          Dr. Nii Amarquaye Commey
+        </h1>
+        <p class="mt-4 text-xl text-slate-600 dark:text-slate-400">
+          Environmental Scientist | GeoAI Systems Builder | Water Intelligence
+          Specialist
+        </p>
+        <p class="mt-2 text-lg text-slate-500 dark:text-slate-400">
+          I bridge academic research and operational practice – translating
+          environmental modelling into decision‑ready systems.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="{{ '/projects/' | relative_url }}"
+            class="px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-slate-700 transition"
+          >
+            Explore Projects
+          </a>
+          <a
+            href="{{ '/research/' | relative_url }}"
+            class="px-6 py-3 rounded-md border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+          >
+            Research Themes
+          </a>
+        </div>
+      </div>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>
-							Portfolio of<br />
-							Nii Amarquaye Commey (PhD)
-						</h1>
-						<h2>
-							Transforming Geospatial Data into Sustainability Solutions
-						</h2>
-						<p>
-							Welcome to my digital portfolio!<br />
-							Explore my work in geospatial science, and environmental sustainability, among others.
-						</p>
-					</div>
+      <!-- Right: Photo (circular, with subtle shadow) -->
+      <div class="flex justify-center md:justify-end">
+        <div
+          class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl ring-4 ring-white dark:ring-slate-800"
+        >
+          <img
+            src="{{ '/assets/images/etc/profile002.jpg' | relative_url }}"
+            alt="Nii Amarquaye Commey"
+            class="w-full h-full object-cover object-[center_30%]"
+          />
+          <!-- object-position: 30% from top moves the image down -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="profile.html">About Nii</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#footer">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
-								<span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/cniiamarquaye" class="icon brands alt fa-github">
-								<span class="label">GitHub</span></a></li>
-							<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
-								<span class="label">Google Scholar</span></a></li>
-						</ul>
-					
-						<button class="hamburger-menu" id="hamburger-menu" aria-label="Open navigation menu">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-					</nav>
+<!-- MY FOCUS AREAS -->
+<section class="py-20 bg-gray-50 dark:bg-slate-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+      My Focus Areas
+    </h2>
 
-				<!-- Main -->
-					<div id="main">
-						
-						<!-- About Section -->
-						<section id="about">
-							<article class="post">
-								<header class="major">
-									<h1>Brief About Me</h1>
-									<span class="image left">
-										<img src="assets/images_/etc/profile000.jpg" alt="Nii Amarquaye Commey" 
-										class="profile-picture" loading="lazy" />
-										</span>
-								</header>
-								<p>
-									I am <strong>Nii Amarquaye Commey (PhD)</strong>, a geospatial scientist and environmental consultant. 
-									My expertise includes GIS, remote sensing, and environmental assessment. I value collaboration, innovation, 
-									and impact-driven solutions, and I am passionate about mapping, coding, and creative arts. <br />
-									With a blend of technical rigor and creative problem-solving, I turn raw spatial
-									data into actionable solutions for environmental sustainability, and climate resilience. 
-									Whether scripting workflows, designing interactive maps, or undertaking environmental assessments, I 
-									thrive at the intersection of technology, collaboration, and impact.
-								</p>
-									My portfolio showcases selected projects. <br />
-									Feel free to <strong><a href="#footer">connect</a></strong> or reach out for collaboration opportunities!
-								</p>
-							</article>
-						</section>
-						
-						<!-- Projects Main Heading -->
-						<section id="projects">
-							<header class="major">
-								<h1>Projects</h1>
-							</header>
-						</section>
-						
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2>
-										<a href="project004.html">Coastal Wetland Monitoring for 
-												Sustainable Development <br />
-										</a>
-									</h2>
-									<p>
-										Cities don’t just grow upwards—they spill outwards, reshaping land and water. In this study, I tracked three
-										decades of land use and land cover (LULC) change in Ghana’s Sakumo and Songor catchments, 
-										revealing how urban sprawl transformed hydrology, water qualities and livelihoods. 
-										A story of how landscapes change, and why wetlands and communities downstream feel the pressure first.
-									</p>
-								</header>
-								<a href="project004.html" class="image main">
-									<div class="figures-grid">
-										<div class="figure-item">
-											<img src="assets/images_/qnspect/LULC SK 1990-2020.gif" 
-												loading="lazy"
-												alt="Sakumo LULC Changes"
-												style="width:80%;border-radius:10px;">
-										</div>
-										<div class="figure-item">
-											<img src="assets/images_/qnspect/LULC SG 1990-2020.gif" 
-												loading = "lazy"
-												alt="Songor LULC Changes"
-												style="width:100%;border-radius:10px;">
-										</div>
-									</div>
-								</a>
-									<ul class="actions special">
-										<li><a href="project004.html" class="button">Read More</a></li>
-									</ul>
-							</article>
+    <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-3xl">
+      I design and implement environmental intelligence systems that integrate
+      remote sensing, hydrological modelling, land use dynamics, and machine
+      learning into scalable analytical frameworks.
+    </p>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2>
-											<a href="project003.html">Rainfall-Runoff and Non-Point Source Pollution Loads<br />
-										in the Sakumo Catchment
-											</a>
-										</h2>
-									</header>
-									<a href="project003.html" class="image fit">
-										<img src="assets/images_/qnspect/SK_TNTrend.png" 
-											 alt="Spatial Distribution of Generated Total Nitrogen." 
-											 loading="lazy" />
-									</a>
-									<p>
-										When it rains in a city, the water doesn’t just vanish—it races off streets and fields, picking up nutrients and
-										pollution along the way. I mapped how 30 years of land use change turned everyday rainfall into a driver of
-										runoff and nutrient loading, showing why wetlands like Sakumo are under pressure and what that means for water,
-										ecosystems, and people.
-									</p>
-									<ul class="actions special">
-										<li><a href="project003.html" class="button">Read More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header class="major">
-										<h2>
-											<a href="project000.html">Modelling Groundwater Contamination</a>
-										</h2>
-									</header>
-										<a href="project000.html" class="image main">
-											<video autoplay loop muted playsinline loading="lazy">
-												<source src="assets/vids_/comsol/comsol000_etc2.webm" type="video/webm">
-												<source src="assets/vids_/comsol/comsol000_etc2.mp4" type="video/mp4">
-												Your browser does not support the video tag.
-											</video>
-										</a>
-										<p>
-											Ever wondered how a spill on the ground ends up in a drinking water well? That is exactly what I explored with
-											this COMSOL-based model. I simulated how water and contaminants move underground. Starting from the surface,
-											filtering through soil, and getting pulled into a pumping well. The model uses a combo of physics (Richards’, Darcy, 
-											and Stokes) to show just how quickly a well can draw in pollution, even from far away. It is a great visual tool 
-											for understanding risk, testing “what-if” scenarios, and planning smarter groundwater protection.
-										</p>
-									</header>
-									<ul class="actions special">
-										<li><a href="project000.html" class="button">Read More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2>
-											<a href="project001.html">Pesticide Transport and Reaction in Soil</a>
-										</h2>
-									</header>
-									<a href="project001.html" class="image fit">
-										<video autoplay loop muted playsinline loading="lazy">
-											<source src="assets/vids_/comsol/comsol001_007c.webm" type="video/webm">
-											<source src="assets/vids_/comsol/comsol001_007c.mp4" type="video/mp4">
-											Your browser does not support the video tag.
-										</video>
-									</a>
-									<p>
-										This one dives into the messy afterlife of Aldicarb, a pesticide that does not just disappear once it hits the soil.
-										Using COMSOL, I modeled how it moves, reacts, and breaks down into by-products. Some of which stick around longer and
-										pose more of a threat than the original chemical. The setup mixes soil physics with chemical reactions, showing how
-										things like sorption, leaching, and volatilization play out over time. It is a helpful way to understand the real-world
-										risks of pesticide use and how contaminants can quietly travel beyond where they were first applied.
-									</p>
-									<ul class="actions special">
-										<li><a href="project001.html" class="button">Read More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2>
-											<a href="project002.html">Terzaghi Compaction</a>
-										</h2>
-									</header>
-									<a href="project002.html" class="image fit">
-										<img src="assets/images_/comsol/comsol002_002.png" alt="" loading="lazy"/></a>
-									<p>
-										Have you ever wondered what happens underground when you apply weight to saturated soils? A deceptively slow, silent process
-										that has big implications for groundwater systems. I used COMSOL to simulate Terzaghi’s 1D consolidation theory, tracking how excess
-										pore pressure bleeds off over time and causes the soil to compact. Sounds simple, but it mirrors what happens in
-										real-world aquifers under stress—like when overpumping causes land to sink or changes how water flows. This model
-										bridges the gap between geomechanics and hydrogeology, showing that understanding pressure dissipation is not just for
-										engineers. It is critical for anyone trying to manage groundwater sustainably in soft or compressible terrains.
-									</p>
-									<ul class="actions special">
-										<li><a href="project002.html" class="button">Read More</a></li>
-									</ul>
-								</article>	
-							</section>
-					</div>
+    <div class="mt-12 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
+          Water & Groundwater Systems
+        </h3>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">
+          Integrated watershed modelling, pollution load assessment, and
+          groundwater risk analytics.
+        </p>
+      </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Reach Out</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="alt">
-							<section>
-								<h3>Connect with me</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/c-nii/" class="icon brands alt fa-linkedin">
-										<span class="label">LinkedIn</span>
-									</a></li>
-									<li><a href="https://github.com/cniiamarquaye" class="icon brands alt fa-github">
-										<span class="label">GitHub</span>
-									</a></li>
-									<li><a href="https://scholar.google.com/citations?user=yourprofile" class="icon brands alt fa-google">
-										<span class="label">Google Scholar</span>
-									</a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
+          Applied GeoAI
+        </h3>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">
+          Scalable Earth observation workflows and machine learning pipelines
+          for environmental monitoring.
+        </p>
+      </div>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Nii Amarquaye Commey</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-			</div>
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
+          Climate & Ecosystem Resilience
+        </h3>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">
+          Spatial modelling of coastal and wetland systems under climatic and
+          anthropogenic stress.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- SELECTED PROJECTS -->
+<section
+  class="py-24 bg-white dark:bg-slate-950 border-t border-gray-200 dark:border-slate-800"
+>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+        Selected Projects
+      </h2>
+      <a
+        href="{{ '/projects/' | relative_url }}"
+        class="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition"
+      >
+        View All →
+      </a>
+    </div>
 
-	</body>
-</html>
+    <div class="mt-12 grid md:grid-cols-3 gap-8">
+      {% for project in site.projects limit:3 %}
+      <a
+        href="{{ project.url | relative_url }}"
+        class="group relative block h-64 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-md hover:shadow-xl transition"
+      >
+        <!-- Background Image -->
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+          style="background-image: url('{{ project.thumbnail | relative_url }}');"
+        ></div>
+
+        <!-- Overlay (dark gradient at bottom for text) -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+        ></div>
+
+        <!-- Title -->
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <h3 class="text-xl font-semibold text-white leading-tight">
+            {{ project.title }}
+          </h3>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

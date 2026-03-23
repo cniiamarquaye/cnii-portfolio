@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<!-- HERO -->
+
+<section class="relative h-[420px] w-full overflow-hidden">
+  {% if page.hero %}
+  <img
+    src="{{ page.hero | relative_url }}"
+    class="absolute inset-0 w-full h-full opacity-50 object-cover"
+    />
+  {% endif %}
+
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6 h-full flex items-center">
+    <div>
+      <h1 class="text-4xl font-semibold text-white">{{ page.title }}</h1>
+
+      {% if page.summary %}
+      <p class="mt-4 text-lg text-slate-200 max-w-2xl">{{ page.summary }}</p>
+      {% endif %}
+
+      <!-- Metadata Tags -->
+      {% if page.tags %}
+      <div class="mt-6 flex flex-wrap gap-3">
+        {% for tag in page.tags %}
+        <span
+          class="text-xs px-3 py-1 rounded-full border border-white/30 text-white/80"
+        >
+          {{ tag }}
+        </span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT CONTENT -->
+
+<section class="max-w-5xl mx-auto px-6 py-16 prose dark:prose-invert">
+  {{ content }}
+</section>

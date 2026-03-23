@@ -1,13 +1,12 @@
 MIT License
 
-Copyright (c) 2025 Nii Amarquaye Commey
+Copyright (c) 2026 Nii Amarquaye Commey
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this portfolio and associated documentation files (the "Software"), to deal
+of this repository and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+copies of the Software, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
@@ -15,42 +14,74 @@ copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
 
-## Third-Party Components and Attributions
+## Scope of License
 
-This portfolio site uses the "Massively" template by [HTML5 UP](https://html5up.net),  
-licensed under the [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/).  
+This license applies **only to the codebase and site structure**, including:
 
-- If you reuse or modify this site, you must retain the required HTML5 UP attribution in the footer or elsewhere, as per their license.
-
----
-
-## Images, Datasets, and Other Media
-
-- All original content, images, datasets, and code in this repository are the intellectual property of **Nii Amarquaye Commey**, unless otherwise credited.
-- Some figures, diagrams, or datasets may be sourced from third-party providers under separate licenses.
-- Where applicable, attributions for these assets are listed in the "Image Credits" section of the [README](README.md).
-
-> **Important:** Third-party images and datasets are not licensed under MIT unless explicitly stated.
+- Layouts, components, and styling
+- Scripts and configuration files
+- Custom UI and frontend logic
 
 ---
 
-## Academic Use and Citations
+## Content, Models, and Media
 
-If referencing **any findings, models, or figures** from this portfolio in academic work, please cite:
+All project content in this repository, including but not limited to:
 
-> Commey, N. A. (2025). *Digital Portfolio: Research in Geospatial Science, Hydrogeology, and Environmental Intelligence*.  
-> [https://cniiamarquaye.github.io](https://cniiamarquaye.github.io)
+- Figures, visualisations, and diagrams  
+- Modelling outputs and simulations  
+- Datasets and derived data products  
+- Written project documentation  
+
+are the intellectual property of **Nii Amarquaye Commey**, unless otherwise stated.
+
+These materials are **not covered by the MIT License** and may not be reused,
+reproduced, or distributed without explicit permission.
 
 ---
 
-## Permissions Beyond This License
+## Third-Party Materials and Learning-Based Work
 
-For academic reuse, permissions, collaboration inquiries, or usage requests that fall outside the scope of this license, 
-please contact: 📧 **cniiamar-research@yahoo.com** | **cniiamarquaye@yahoo.com**
+Some components of this portfolio are based on or inspired by:
+
+- Publicly available datasets  
+- Scientific literature  
+- Software training materials (e.g., COMSOL Multiphysics tutorials)
+
+Where applicable:
+
+- Original sources are acknowledged within project pages  
+- Adaptations, extensions, and interpretations are my own  
+
+> Inclusion of such materials is for demonstration of technical capability and does not imply ownership of original source content.
+
+---
+
+## Academic Use and Citation
+
+If referencing concepts, models, or outputs from this portfolio in academic or professional work, please cite:
+
+Commey, N. A. (2026).  
+*Geospatial and Spatial Modelling Portfolio for Environmental Intelligence*  
+https://cniiamarquaye.github.io
+
+---
+
+## Permissions
+
+For permissions related to:
+
+- Reuse of figures or visual content  
+- Collaboration or research use  
+- Extended application of models or workflows  
+
+Please contact:
+
+cniiamar-research@yahoo.com  
+cniiamarquaye@yahoo.com

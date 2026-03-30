@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Reusable card style for publications, research clusters, focus areas */
+  .card {
+    @apply p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:shadow-lg transition;
+  }
+
+  .card-accent {
+    @apply p-6 rounded-2xl border border-slate-400 dark:border-slate-400 hover:shadow-xl transition;
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply text-2xl font-semibold text-slate-900 dark:text-slate-100;
+  }
+
+  /* Body text */
+  .body-text {
+    @apply text-slate-600 dark:text-slate-400 leading-relaxed;
+  }
+
+  /* Divider line */
+  .section-divider {
+    @apply border-t border-slate-200 dark:border-slate-800;
+  }
+
+  /* Navigation link (header) */
+  .nav-link {
+    @apply text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition;
+  }
+
+  /* Footer link */
+  .footer-link {
+    @apply text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply px-6 py-3 rounded-md bg-slate-900 text-white dark:bg-slate-200 dark:text-slate-900 hover:bg-slate-700 dark:hover:bg-white transition;
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply px-6 py-3 rounded-md border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition;
+  }
+
+  /* Pill tag */
+  .tag-pill {
+    @apply text-xs px-3 py-1 rounded-full border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition;
+  }
+
+  /* Article prose (insights layout) */
+  .prose-article {
+    @apply prose prose-lg prose-slate dark:prose-invert max-w-none;
+  }
+  .prose-article h2 {
+    @apply text-2xl font-semibold tracking-tight mt-14 mb-6;
+  }
+  .prose-article p {
+    @apply leading-relaxed;
+  }
+  .prose-article blockquote {
+    @apply border-l-slate-900 dark:border-l-slate-200 bg-slate-50 dark:bg-slate-900/50 py-4 px-6 rounded-r-lg not-italic font-medium;
+  }
+  .prose-article strong {
+    @apply text-slate-900 dark:text-slate-100;
+  }
+  .prose-article hr {
+    @apply border-slate-200 dark:border-slate-800 my-12;
+  }
+
+  /* Reading progress bar */
+  .progress-bar {
+    @apply fixed top-0 left-0 h-[3px] bg-slate-900 dark:bg-slate-200 z-[60] transition-all duration-100;
+  }
+
+  /* Article meta separator dot */
+  .meta-dot {
+    @apply text-slate-300 dark:text-slate-600;
+  }
+}

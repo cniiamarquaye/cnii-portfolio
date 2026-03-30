@@ -8,7 +8,7 @@ subtitle: Environmental systems modelling and geospatial intelligence
 <section class="relative">
 
    <!-- Parallax Background -->
-<div class="absolute inset-0 -z-10 bg-fixed bg-center bg-cover opacity-10 bg-[url('/assets/images/background/iotd-banner.webp')]"></div>
+<div class="absolute inset-0 -z-10 bg-fixed bg-center bg-cover opacity-10 bg-parallax-banner"></div>
 
   <!-- Page Content -->
 <div class="max-w-4xl mx-auto px-6 py-20 space-y-20">
@@ -19,13 +19,21 @@ subtitle: Environmental systems modelling and geospatial intelligence
       Research Focus
     </h2>
 
-    <p class="mt-6 text-slate-600 dark:text-slate-400 leading-relaxed">
-  My work focuses on using geospatial data and environmental modelling to understand how landscapes are changing over time and how those changes affect ecosystems, water systems, and human activity.
-</p>
+  <p class="mt-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+  My work uses geospatial data and environmental modelling to track how landscapes change over time and how those changes affect ecosystems, water systems, and human activity.
+  </p>
 
-<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-  I build and apply workflows that combine satellite observations, field data, and spatial analysis to produce insights that are not just scientifically sound, but usable for planning, monitoring, and decision-making.
-</p>
+  <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+  I develop practical workflows that combine satellite data, field observations and spatial analysis to produce results that are both scientifically robust and are directly usable for planning, monitoring, and decision-making.
+  </p>
+
+  <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+  These ideas are carried through into <a
+          href="{{ '/projects/' | relative_url }}"
+          class="font-medium text-slate-700 dark:text-slate-300 underline-offset-4 hover:underline hover:text-slate-900 dark:hover:text-white transition"
+          > selected projects
+        </a>, where the methods are applied to real datasets and case studies.
+  </p>
 
   </div>
 
@@ -47,7 +55,7 @@ subtitle: Environmental systems modelling and geospatial intelligence
         </h3>
 
         <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-          <li>Ecosystem modification under climatic stress</li>
+          <li>Ecosystem change detection under climatic and human pressures</li>
           <li>Land use and land cover dynamics</li>
           <li>Satellite-based wetland monitoring</li>
           <li>Benthic assemblage assessment</li>
@@ -86,6 +94,18 @@ subtitle: Environmental systems modelling and geospatial intelligence
     </div>
 
   </div>
+
+<!-- Projects Link -->
+  <div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-wrap justify-center gap-4">
+  <a href="{{ '/projects/' | relative_url }}"
+     class="group inline-flex items-center gap-2 text-sm px-6 py-2 rounded-full border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+    <span>View Projects →</span>
+  </a>
+  <a href="{{ '/blog/' | relative_url }}"
+     class="group inline-flex items-center gap-2 text-sm px-6 py-2 rounded-full border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+    <span>Read Insights →</span>
+  </a>
+</div>
 
   <!-- Divider -->
   <div class="border-t border-slate-200 dark:border-slate-800"></div>

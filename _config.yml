@@ -30,6 +30,19 @@ url: "https://cniiamarquaye.github.io" # the base hostname & protocol for your s
 linkedin_username: c-nii
 github_username:  cniiamarquaye
 
+# Navigation items — single source of truth for header + footer
+nav:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: Research
+    url: /research/
+  - title: Insights
+    url: /blog/
+  - title: About
+    url: /pages/about/
+
 collections:
   projects:
     output: true
@@ -37,6 +50,9 @@ collections:
   research:
     output: true
     permalink: /research/:name
+  insights:
+    output: true
+    permalink: /blog/:name
 
 markdown: kramdown
 
@@ -52,6 +68,11 @@ defaults:
       type: "research"
     values:
       layout: "research"
+  - scope:
+      path: ""
+      type: "insights"
+    values:
+      layout: "insights"
 
     
 # Build settings

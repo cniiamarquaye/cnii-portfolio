@@ -21,7 +21,7 @@ title: Contact
           
 
           <!-- Button (matches about page style) -->
-          <a href="/pages/contact/"
+          <a href="{{ '/pages/contact/' | relative_url }}"
              class="inline-block px-6 py-3 mt-8 text-sm font-medium tracking-wide
                     bg-slate-900 text-white rounded-md
                     dark:bg-slate-200 dark:text-slate-900
@@ -46,13 +46,17 @@ title: Contact
               Interested in collaboration or have a project in mind? Let’s talk.
             </p>
 
-            <form class="mt-6 space-y-4">
+            <!-- Opens the visitor's default email client with fields pre-filled -->
+            <form id="contact-form" class="mt-6 space-y-4" onsubmit="return handleContactForm(event)">
               <!-- Name -->
               <div>
-                <label class="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <label for="name" class="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
                   Full name
                 </label>
                 <input type="text"
+                       id="name"
+                       name="name"
+                       required
                        placeholder="Kojo Commey"
                        class="block w-full px-5 py-3 text-sm
                               bg-white dark:bg-slate-900
@@ -66,10 +70,13 @@ title: Contact
 
               <!-- Email -->
               <div>
-                <label class="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <label for="email" class="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
                   Email address
                 </label>
                 <input type="email"
+                       id="email"
+                       name="email"
+                       required
                        placeholder="kojocom@example.com"
                        class="block w-full px-5 py-3 text-sm
                               bg-white dark:bg-slate-900
@@ -83,10 +90,13 @@ title: Contact
 
               <!-- Message -->
               <div>
-                <label class="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <label for="message" class="block mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
                   Message
                 </label>
                 <textarea rows="4"
+                          id="message"
+                          name="message"
+                          required
                           placeholder="Tell me about your project..."
                           class="block w-full px-5 py-3 text-sm
                                  bg-white dark:bg-slate-900
@@ -99,7 +109,8 @@ title: Contact
               </div>
 
               <!-- Submit Button -->
-              <button class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide
+              <button type="submit"
+                      class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide
                              bg-slate-900 text-white rounded-md
                              dark:bg-slate-200 dark:text-slate-900
                              hover:bg-slate-700 dark:hover:bg-white
@@ -114,3 +125,18 @@ title: Contact
 
   </div>
 </section>
+
+<script>
+  function handleContactForm(e) {
+    e.preventDefault();
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+    var subject = "Portfolio Inquiry from " + name;
+    var body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+    window.location.href = "mailto:cniiamarquaye@yahoo.com"
+      + "?subject=" + encodeURIComponent(subject)
+      + "&body=" + encodeURIComponent(body);
+    return false;
+  }
+</script>

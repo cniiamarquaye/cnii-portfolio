@@ -37,26 +37,13 @@
           Explore
         </h4>
         <ul class="mt-4 space-y-3 text-sm">
+          {% for item in site.nav %}
+          {% if item.title != "Home" %}
           <li>
-            <a href="{{ '/projects/' | relative_url }}" class="footer-link"
-              >Projects</a
-            >
+            <a href="{{ item.url | relative_url }}" class="footer-link">{{ item.title }}</a>
           </li>
-          <li>
-            <a href="{{ '/research/' | relative_url }}" class="footer-link"
-              >Research</a
-            >
-          </li>
-          <li>
-            <a href="{{ '/blog/' | relative_url }}" class="footer-link"
-              >Insights</a
-            >
-          </li>
-          <li>
-            <a href="{{ '/pages/about/' | relative_url }}" class="footer-link"
-              >About</a
-            >
-          </li>
+          {% endif %}
+          {% endfor %}
         </ul>
       </div>
 

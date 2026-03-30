@@ -143,7 +143,6 @@ Multi-temporal land use and land cover classification and long-term change detec
 
 </div>
 
-
 <div class="grid md:grid-cols-3 gap-x-6 py-2.5 text-sm">
 
 <div class="font-semibold text-slate-800 dark:text-slate-200">
@@ -155,7 +154,6 @@ Elevation and terrain information used to derive hydrological catchment boundari
 </div>
 
 </div>
-
 
 <div class="grid md:grid-cols-3 gap-x-6 py-2.5 text-sm">
 
@@ -169,7 +167,6 @@ Long-term precipitation and temperature datasets used to assess hydro-climatic v
 
 </div>
 
-
 <div class="grid md:grid-cols-3 gap-x-6 py-2.5 text-sm">
 
 <div class="font-semibold text-slate-800 dark:text-slate-200">
@@ -181,7 +178,6 @@ Population density datasets used to quantify spatial growth patterns and anthrop
 </div>
 
 </div>
-
 
 <div class="grid md:grid-cols-3 gap-x-6 py-2.5 text-sm">
 
@@ -201,12 +197,12 @@ Ground-based climate observations supporting validation of satellite-derived cli
 
 <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
 <strong>Abbreviations:</strong>
-USGS – United States Geological Survey; 
-SRTM – Shuttle Radar Topography Mission; 
-CHIRPS – Climate Hazards Group InfraRed Precipitation with Station Data; 
-TerraClimate – Global climate dataset; 
-LandScan – Population distribution dataset; 
-WorldPop – High-resolution global population dataset; 
+USGS – United States Geological Survey;
+SRTM – Shuttle Radar Topography Mission;
+CHIRPS – Climate Hazards Group InfraRed Precipitation with Station Data;
+TerraClimate – Global climate dataset;
+LandScan – Population distribution dataset;
+WorldPop – High-resolution global population dataset;
 GlobPOP – Gridded global population dataset.
 </p>
 
@@ -393,7 +389,6 @@ class="rounded-xl w-full">
 
 </div>
 
-
 <div class="space-y-4">
 
 <h2 class="text-xl font-semibold">Catchment Boundaries</h2>
@@ -530,7 +525,6 @@ dominant driver of wetland change</strong> within the Sakumo and
 Songor catchments.
 </p>
 
-
 <h4 class="font-semibold mt-6">Hydro-Climatic Trend Test Results</h4>
 
 <p class="text-xs text-slate-500 mb-2 sm:hidden">
@@ -637,9 +631,11 @@ Swipe horizontally to view full table →
 <h2 class="text-xl font-semibold">Publication</h2>
 
 <a href="https://doi.org/10.3390/w15203568"
-class="text-blue-600 hover:underline font-medium">
+   target="_blank"
+   rel="noopener noreferrer"
+   class="text-blue-600 hover:underline font-medium">
 
-Catchment-Scale Land Use and Land Cover Change Analysis in Two Coastal Ramsar Sites in Ghana Using Remote Sensing
+   Catchment-Scale Land Use and Land Cover Change Analysis in Two Coastal Ramsar Sites in Ghana Using Remote Sensing
 
 </a>
 

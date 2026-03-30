@@ -598,9 +598,11 @@ wetland catchment management and water quality protection.
 <h2 class="text-xl font-semibold">Publication</h2>
 
 <a href="https://doi.org/10.2208/journalofjsce.25-27025"
-class="text-blue-600 hover:underline font-medium">
+   target="_blank"
+   rel="noopener noreferrer"
+   class="text-blue-600 hover:underline font-medium">
 
-Assessment of Rainfall–Runoff and Non-Point Source Pollution Loads in the Sakumo Catchment using GIS and QNSPECT
+   Assessment of Rainfall–Runoff and Non-Point Source Pollution Loads in the Sakumo Catchment using GIS and QNSPECT
 
 </a>
 

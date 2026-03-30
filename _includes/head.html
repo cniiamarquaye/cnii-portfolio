@@ -1,10 +1,27 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>{{ page.title }} | {{ site.title }}</title>
+<title>{{ page.title | default: site.title }} | {{ site.title }}</title>
 <meta
   name="description"
-  content="{{ page.description | default: site.description }}"
+  content="{{ page.summary | default: page.description | default: site.description }}"
 />
 
+<!-- Open Graph / Social -->
+<meta property="og:title" content="{{ page.title | default: site.title }}" />
+<meta property="og:description" content="{{ page.summary | default: page.description | default: site.description }}" />
+<meta property="og:type" content="{% if page.layout == 'insights' %}article{% else %}website{% endif %}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+{% if page.thumbnail %}
+<meta property="og:image" content="{{ page.thumbnail | absolute_url }}" />
+{% endif %}
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+<style>
+  :root {
+    --bg-header: url('{{ "/assets/images/background/usgs-002-unsplash.jpg" | relative_url }}');
+    --bg-footer: url('{{ "/assets/images/background/usgs-000-unsplash.jpg" | relative_url }}');
+  }
+</style>

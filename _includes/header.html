@@ -31,41 +31,9 @@
         >
           🌙
         </button>
-        <a
-          href="{{ '/' | relative_url }}"
-          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
-        >
-          Home
-        </a>
-
-        <a
-          href="{{ '/projects/' | relative_url }}"
-          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
-        >
-          Projects
-        </a>
-
-        <a
-          href="{{ '/research/' | relative_url }}"
-          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
-        >
-          Research
-        </a>
-
-        <a
-          href="{{ '/blog/' | relative_url }}"
-          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
-        >
-          Insights
-        </a>
-
-        <a
-          href="{{ '/pages/about/' | relative_url }}"
-          class="text-gray-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
-        >
-          About
-        </a>
-
+        {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}" class="nav-link">{{ item.title }}</a>
+        {% endfor %}
         <a
           href="{{ '/pages/contact/' | relative_url }}"
           class="px-4 py-2 rounded-md bg-slate-900 text-white dark:bg-slate-200 dark:text-slate-900 hover:bg-slate-700 dark:hover:bg-white transition"
@@ -74,60 +42,51 @@
         </a>
       </nav>
 
-      <!-- Mobile Toggle -->
-      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      <!-- Mobile: theme toggle + hamburger (grouped, desktop-hidden) -->
+      <div class="flex items-center gap-4 md:hidden">
+        <button
+          id="theme-toggle-mobile"
+          class="text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white transition text-lg"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
+          🌙
+        </button>
+        <button id="menu-btn" class="text-gray-700 dark:text-slate-200 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
+  </div><!-- end bg-header -->
 
-  <!-- Mobile Menu -->
+  <!-- Mobile Menu — outside the bg-header container for a solid, opaque background -->
   <div
     id="mobile-menu"
-    class="hidden md:hidden bg-white dark:bg-slate-600 border-t border-gray-200 dark:border-slate-800"
+    class="hidden md:hidden bg-white dark:bg-slate-950 border-t border-gray-200 dark:border-slate-700"
   >
-    <div class="px-6 py-6 space-y-4 text-sm font-medium">
+    <div class="px-6 py-6 space-y-1 text-sm font-medium">
+      {% for item in site.nav %}
       <a
-        href="{{ '/' | relative_url }}"
-        class="block text-white-700 hover:text-slate-400"
-        >Home</a
+        href="{{ item.url | relative_url }}"
+        class="block px-3 py-2 rounded-md text-slate-900 dark:text-white hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition"
+        >{{ item.title }}</a
       >
-      <a
-        href="{{ '/projects/' | relative_url }}"
-        class="block text-white-700 hover:text-slate-400"
-        >Projects</a
-      >
-      <a
-        href="{{ '/research/' | relative_url }}"
-        class="block text-white-700 hover:text-slate-400"
-        >Research</a
-      >
-      <a
-        href="{{ '/blog/' | relative_url }}"
-        class="block text-white-700 hover:text-slate-400"
-        >Insights</a
-      >
-      <a
-        href="{{ '/pages/about/' | relative_url }}"
-        class="block text-white-700 hover:text-slate-400"
-        >About</a
-      >
-
+      {% endfor %}
+      
       <a
         href="{{ '/pages/contact/' | relative_url }}"
-        class="block text-center mt-4 px-4 py-2 rounded-md bg-slate-900 text-white dark:bg-slate-200 dark:text-slate-900"
+        class="block text-center mt-4 px-4 py-2 rounded-md bg-slate-900 text-white dark:bg-slate-200 dark:text-slate-900 hover:bg-slate-700 dark:hover:bg-white transition"
       >
         Contact
       </a>

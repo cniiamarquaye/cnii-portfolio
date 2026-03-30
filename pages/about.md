@@ -15,7 +15,7 @@ subtitle: Geospatial intelligence for environmental modelling, ecosystems, and d
 <figure class="md:flex bg-slate-100 dark:bg-slate-800 rounded-xl p-8 md:p-0">
   
   <img class="w-24 h-24 md:w-48 md:h-auto rounded-full md:rounded-2xl mx-auto md:mx-0 object-cover"
-       src="/assets/images/etc/profile002.jpg"
+       src="{{ '/assets/images/etc/profile002.jpg' | relative_url }}"
        alt="Nii Amarquaye Commey">
 
   <div class="pt-6 md:p-8 text-center md:text-left space-y-4">

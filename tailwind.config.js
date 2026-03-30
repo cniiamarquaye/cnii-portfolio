@@ -8,6 +8,8 @@ module.exports = {
     "./_projects/**/*.md",
     "./projects/**/*.html",
     "./_research/**/*.md",
+    "./_insights/**/*.md",
+    "./blog/**/*.md",
     "./pages/**/*.md",
     "./*.html",
   ],
@@ -34,8 +36,8 @@ module.exports = {
         tightest: "-0.02em",
       },
       backgroundImage: {
-        'header': "url('/assets/images/background/usgs-002-unsplash.jpg')",
-        'footer': "url('/assets/images/background/usgs-000-unsplash.jpg')",
+        'header': "var(--bg-header)",
+        'footer': "var(--bg-footer)",
       }
     },
   },

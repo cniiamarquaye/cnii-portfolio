@@ -3,43 +3,6 @@
   <head>
     {% include head.html %}
   </head>
-
-  <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const toggle = document.getElementById("theme-toggle");
-          const html = document.documentElement;
-
-          // Load saved theme
-          if (localStorage.getItem("theme") === "dark") {
-            html.classList.add("dark");
-          }
-
-          toggle?.addEventListener("click", () => {
-            html.classList.toggle("dark");
-
-            if (html.classList.contains("dark")) {
-              localStorage.setItem("theme", "dark");
-              toggle.textContent = "☀️";
-            } else {
-              localStorage.setItem("theme", "light");
-              toggle.textContent = "🌙";
-            }
-          });
-        });
-
-      /* -----------------------------
-      Mobile Menu Toggle
-      ----------------------------- */
-
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener("click", function () {
-          mobileMenu.classList.toggle("hidden");
-        });
-      };
-  </script>
   <body
     class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans antialiased"
   >
@@ -47,8 +10,7 @@
 
     <main class="max-w-7xl mx-auto px-6 py-12">{{ content }}</main>
 
-    {% include footer.html %} {% include scripts.html %}
-
-    <script src="{{ '/assets/js/projects.js' | relative_url }}"></script>
+    {% include footer.html %}
+    {% include scripts.html %}
   </body>
 </html>

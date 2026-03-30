@@ -149,3 +149,53 @@ title: Home
     </div>
   </div>
 </section>
+
+<!-- LATEST INSIGHTS -->
+{% if site.insights.size > 0 %}
+<section class="py-24 bg-gray-50 dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+        Latest Insights
+      </h2>
+      <a
+        href="{{ '/blog/' | relative_url }}"
+        class="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition"
+      >
+        View All →
+      </a>
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      {% for post in site.insights reversed limit:2 %}
+      <a
+        href="{{ post.url | relative_url }}"
+        class="group block p-6 card"
+      >
+        {% if post.category %}
+        <p class="text-xs font-medium uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">
+          {{ post.category }}
+        </p>
+        {% endif %}
+
+        <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100 group-hover:text-slate-700 dark:group-hover:text-white transition">
+          {{ post.title }}
+        </h3>
+
+        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          {{ post.summary }}
+        </p>
+
+        <div class="mt-4 flex items-center gap-3 text-xs text-slate-500">
+          <time>{{ post.date | date: "%B %d, %Y" }}</time>
+          {% if post.read_time %}
+          <span class="text-slate-300 dark:text-slate-600">·</span>
+          <span>{{ post.read_time }} min read</span>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

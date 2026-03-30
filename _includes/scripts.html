@@ -1,11 +1,50 @@
 <script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
+  document.addEventListener("DOMContentLoaded", function () {
+    var html = document.documentElement;
+    var toggle = document.getElementById("theme-toggle");
+    var toggleMobile = document.getElementById("theme-toggle-mobile");
 
-  if (btn) {
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  }
+    function syncIcons() {
+      var icon = html.classList.contains("dark") ? "☀️" : "🌙";
+      if (toggle) toggle.textContent = icon;
+      if (toggleMobile) toggleMobile.textContent = icon;
+    }
+
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("dark");
+    }
+    syncIcons();
+
+    function flipTheme() {
+      html.classList.toggle("dark");
+      localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light");
+      syncIcons();
+    }
+
+    toggle?.addEventListener("click", flipTheme);
+    toggleMobile?.addEventListener("click", flipTheme);
+
+    // Mobile menu toggle
+    var menuBtn = document.getElementById("menu-btn");
+    var mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    // Reading progress bar (insights articles only)
+    var progressBar = document.getElementById("progress-bar");
+    if (progressBar) {
+      window.addEventListener("scroll", function () {
+        var h = document.documentElement;
+        var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+        progressBar.style.width = Math.min(scrolled, 100) + "%";
+      });
+    }
+  });
 </script>
-<script src="/assets/js/projects.js" defer></script>
+{% if page.layout == 'project' or page.layout == 'default' %}
+<script src="{{ '/assets/js/projects.js' | relative_url }}" defer></script>
+{% endif %}

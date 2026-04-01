@@ -2,6 +2,7 @@
 layout: page
 title: About
 subtitle: Geospatial intelligence for environmental modelling, ecosystems, and decision support
+permalink: /pages/about/
 ---
 
 <section class="space-y-20">

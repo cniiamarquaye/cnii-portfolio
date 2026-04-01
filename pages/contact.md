@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact
+permalink: /pages/contact/
 ---
 
 <section class="bg-cover bg-center"

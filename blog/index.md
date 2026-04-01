@@ -18,8 +18,19 @@ subtitle: Thoughts, methods, and applied work in geospatial intelligence
     {% for post in site.insights reversed %}
     <a
       href="{{ post.url | relative_url }}"
-      class="group block p-6 card"
+      class="group block overflow-hidden card"
     >
+      {% if post.thumbnail %}
+      <div class="aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-800">
+        <img
+          src="{{ post.thumbnail | relative_url }}"
+          alt="{{ post.title }}"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+        />
+      </div>
+      {% endif %}
+
+      <div class="p-6">
       {% if post.category %}
       <p class="text-xs font-medium uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">
         {{ post.category }}
@@ -49,6 +60,7 @@ subtitle: Thoughts, methods, and applied work in geospatial intelligence
         {% endfor %}
       </div>
       {% endif %}
+      </div>
     </a>
     {% endfor %}
   </div>

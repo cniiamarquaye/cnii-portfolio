@@ -127,6 +127,20 @@ A radar anomaly, a vegetation shift, or a classification output does not answer 
 Most environmental workflows implicitly follow a three-step chain:
 </p>
 
+<div class="space-y-4">
+
+<h2 class="text-xl font-semibold">Analytical Workflow</h2>
+
+<img src="{{ '/assets/images/etc/blogi001-a2.jpg' | relative_url }}"
+class="rounded-xl w-full">
+
+<p class="text-sm text-slate-500">
+<i> A conceptual diagram illustrating the breakdown between high-fidelity geospatial interpretation and actionable executive decision-making.
+</i>
+</p>
+
+</div>
+
 <p class="font-semibold">
 Detection → Interpretation → Framing
 </p>

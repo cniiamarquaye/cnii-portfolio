@@ -3,7 +3,7 @@ layout: insights
 title: "The Quiet Failure of Good Data"
 summary: "A perfect satellite output has one job — reach a decision-maker. Most never do. This isn't a data problem. It's a breakdown in the chain between signal and decision."
 hero: /assets/images/etc/blog001-a2.jpg
-thumbnail: /assets/images/etc/blog001-a2.jpg
+thumbnail: /assets/images/etc/blog001-a3.jpg
 author: Dr. Nii Amarquaye Commey
 date: 2026-03-30
 read_time: 6
@@ -133,10 +133,10 @@ Most environmental workflows implicitly follow a three-step chain:
 
 <h2 class="text-xl font-semibold">Analytical Workflow</h2>
 
-<img src="{{ '/assets/images/etc/blog001-a2.jpg' | relative_url }}"
+<img src="{{ '/assets/images/etc/blog001-a3.jpg' | relative_url }}"
 class="rounded-xl w-full">
 <p class="text-sm text-slate-500">
-<i> A conceptual diagram illustrating the breakdown between high-fidelity geospatial interpretation and actionable executive decision-making.
+<i> Value is lost when the chain from detection to decision breaks at interpretation and framing.
 </i>
 </p>
 

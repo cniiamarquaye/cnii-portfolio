@@ -173,6 +173,7 @@ class="rounded-xl w-full">
 <p class="text-sm text-slate-500">
 <i> Turning data into decisions requires clear framing of consequence and timing.
 </i>
+</p>
 
 <p class="text-sm text-slate-500">
 Moving from detection to decision requires explicit framing of consequence and timing.

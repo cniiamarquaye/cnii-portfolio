@@ -6,6 +6,8 @@ hero: /assets/images/etc/blog002-a0.png
 thumbnail: /assets/images/etc/blog002-a0.png
 author: Dr. Nii Amarquaye Commey
 date: 2026-04-27
+series: "From Data to Decision"
+series_order: 2
 read_time: 5
 category: Environmental Intelligence
 tags:

@@ -67,6 +67,63 @@ layout: default
   </div>
   {% endif %}
 
+  <!-- Series navigation -->
+  {% if page.series %}
+    {% assign series_items = site.insights | where: "series", page.series | sort: "series_order" %}
+    {% assign series_count = series_items | size %}
+
+    <nav class="mt-14 pt-8 border-t border-slate-200 dark:border-slate-800"
+         aria-label="Series navigation">
+
+      <div class="mb-6">
+        <p class="text-xs font-medium uppercase tracking-widest text-slate-500 dark:text-slate-400">
+          {{ page.series }}
+        </p>
+        <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          Part {{ page.series_order }} of {{ series_count }}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        {% assign previous_order = page.series_order | minus: 1 %}
+        {% assign next_order = page.series_order | plus: 1 %}
+
+        {% assign previous_item = series_items | where: "series_order", previous_order | first %}
+        {% assign next_item = series_items | where: "series_order", next_order | first %}
+
+        {% if previous_item %}
+        <a href="{{ previous_item.url | relative_url }}"
+           class="group rounded-lg border border-slate-200 dark:border-slate-800 p-4 hover:border-slate-400 dark:hover:border-slate-600 transition">
+          <span class="text-xs text-slate-500 dark:text-slate-400">
+            ← Previous
+          </span>
+          <span class="mt-2 block text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-slate-950 dark:group-hover:text-white">
+            {{ previous_item.title }}
+          </span>
+        </a>
+        {% else %}
+        <div></div>
+        {% endif %}
+
+        {% if next_item %}
+        <a href="{{ next_item.url | relative_url }}"
+           class="group rounded-lg border border-slate-200 dark:border-slate-800 p-4 text-left sm:text-right hover:border-slate-400 dark:hover:border-slate-600 transition">
+          <span class="text-xs text-slate-500 dark:text-slate-400">
+            Next →
+          </span>
+          <span class="mt-2 block text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-slate-950 dark:group-hover:text-white">
+            {{ next_item.title }}
+          </span>
+        </a>
+        {% else %}
+        <div></div>
+        {% endif %}
+
+      </div>
+    </nav>
+  {% endif %}
+
   <!-- Back link -->
   <div class="mt-10">
     <a href="{{ '/blog/' | relative_url }}"

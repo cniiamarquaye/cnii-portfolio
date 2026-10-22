@@ -19,6 +19,10 @@ fi
 git remote get-url origin > /dev/null 2>&1 || { echo "❌ 'origin' remote not set"; exit 1; }
 git remote get-url private > /dev/null 2>&1 || { echo "❌ 'private' remote not set"; exit 1; }
 
+# --- Ask BEFORE anything is pushed ---
+read -p "⚠️ Push main to PUBLIC repo? (y/n): " confirm
+[[ $confirm == "y" ]] || { echo "Aborted. Nothing was pushed."; exit 1; }
+
 # --- 1. Push main to public repo ---
 echo "🚀 Pushing main → public (origin)..."
 git checkout main
@@ -37,6 +41,3 @@ echo "✅ dev successfully pushed to private repo."
 git checkout main
 
 echo "🎯 Done. Everything synced cleanly."
-
-read -p "⚠️ Push main to PUBLIC repo? (y/n): " confirm
-[[ $confirm == "y" ]] || { echo "Aborted."; exit 1; }

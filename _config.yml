@@ -77,7 +77,8 @@ defaults:
     
 # Build settings
 #theme: minima
-#plugins:
+plugins:
+  - jekyll-sitemap
 #  - jekyll-feed
 
 # Exclude from processing.

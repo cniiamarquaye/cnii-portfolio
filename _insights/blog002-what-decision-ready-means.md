@@ -31,7 +31,7 @@ Environmental Intelligence • Decision Support • Remote Sensing
 
 <p>
 In the 
-<a href="/blog/blog001-the-quiet-failure-of-good-data">previous piece 
+<a href="{{ '/blog/blog001-the-quiet-failure-of-good-data' | relative_url }}">previous piece 
 on the gap between geospatial insight and decision-making
 </a>, 
 I pointed out a recurring issue:

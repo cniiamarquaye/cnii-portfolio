@@ -26,7 +26,7 @@ Environmental Intelligence • Decision Support • Remote Sensing
 <div class="space-y-4">
 
 <p>
-In the <a href="/blog/blog002-what-decision-ready-means">previous article</a>, 
+In the <a href="{{ '/blog/blog002-what-decision-ready-means' | relative_url }}">previous article</a>, 
 I asked what makes an environmental insight decision-ready.
 </p>
 

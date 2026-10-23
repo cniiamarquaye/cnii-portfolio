@@ -32,6 +32,19 @@ layout: default
       >
         Back to Home
       </a>
+    
+      <a id="report-link" href="mailto:cniiamarquaye@yahoo.com"
+        class="border border-slate-400 text-slate-800 dark:text-slate-200 px-6 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        Report this broken link
+      </a>
     </div>
   </div>
 </div>
+<script>
+  (function () {
+    var link = document.getElementById("report-link");
+    if (!link) return;
+    var body = "Hello,\n\nI found a broken page on your portfolio.\n\nPage: " + window.location.href + "\nI came from: " + (document.referrer || "unknown") + "\n";
+    link.href = "mailto:cniiamarquaye@yahoo.com?subject=" + encodeURIComponent("Broken link on portfolio") + "&body=" + encodeURIComponent(body);
+  })();
+</script>

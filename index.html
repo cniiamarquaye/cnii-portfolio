@@ -167,7 +167,8 @@ title: Home
     </div>
 
     <div class="mt-12 grid gap-8 md:grid-cols-2">
-      {% for post in site.insights reversed limit:2 %}
+      {% assign latest_insights = site.insights | sort: "date" | reverse %}
+      {% for post in latest_insights limit:2 %}
       <a
         href="{{ post.url | relative_url }}"
         class="group block p-6 card"
